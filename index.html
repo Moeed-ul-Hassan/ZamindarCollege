@@ -13,6 +13,7 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/page-transitions.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -621,6 +622,7 @@
     <!-- Custom JS -->
     <script src="js/main.js"></script>
     <script src="js/particles.js"></script>
+    <script src="js/page-transitions.js"></script>
     
     <!-- Add ID for scroll functionality -->
     <script>
@@ -638,6 +640,37 @@
                 particle.style.setProperty('--move-x', (Math.random() * 2 - 1).toFixed(2));
                 particle.style.setProperty('--move-y', (Math.random() * 2 - 1).toFixed(2));
                 particle.style.setProperty('--rotation', Math.random() > 0.5 ? 1 : -1);
+            });
+
+            // Add page reveal animation to certain elements
+            const revealElements = document.querySelectorAll('.hero-title, .section-heading h2');
+            revealElements.forEach(element => {
+                element.classList.add('page-reveal');
+            });
+
+            // Apply slide animations to sections
+            const sections = document.querySelectorAll('.section');
+            let delay = 0;
+            sections.forEach((section, index) => {
+                if (index % 2 === 0) {
+                    section.classList.add('slide-up');
+                } else {
+                    section.classList.add('slide-down');
+                }
+                section.style.animationDelay = delay + 's';
+                delay += 0.1;
+            });
+
+            // Add elastic hover effect to buttons
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.classList.add('elastic-hover');
+            });
+
+            // Add zoom effect to images
+            const imageContainers = document.querySelectorAll('.image-frame');
+            imageContainers.forEach(container => {
+                container.classList.add('zoom-on-hover');
             });
         });
     </script>
