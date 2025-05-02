@@ -101,7 +101,7 @@
                 <div class="heading-underline center"></div>
             </div>
             <div class="programs-grid">
-                <div class="program-card animate-fade-in">
+                <div class="program-card glassmorphism neon-border animate-fade-in">
                     <div class="program-icon">
                         <i class="fas fa-flask"></i>
                     </div>
@@ -112,7 +112,7 @@
                     </div>
                 </div>
                 
-                <div class="program-card animate-fade-in">
+                <div class="program-card glassmorphism neon-border animate-fade-in">
                     <div class="program-icon">
                         <i class="fas fa-book"></i>
                     </div>
@@ -123,7 +123,7 @@
                     </div>
                 </div>
                 
-                <div class="program-card animate-fade-in">
+                <div class="program-card glassmorphism neon-border animate-fade-in">
                     <div class="program-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
@@ -145,7 +145,7 @@
     <section class="section stats-section">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-card animate-fade-in">
+                <div class="stat-card glassmorphism hover-scale animate-fade-in">
                     <div class="stat-icon">
                         <i class="fas fa-user-graduate"></i>
                     </div>
@@ -153,7 +153,7 @@
                     <div class="stat-label">Students</div>
                 </div>
                 
-                <div class="stat-card animate-fade-in">
+                <div class="stat-card glassmorphism hover-scale animate-fade-in">
                     <div class="stat-icon">
                         <i class="fas fa-chalkboard-teacher"></i>
                     </div>
@@ -161,7 +161,7 @@
                     <div class="stat-label">Faculty Members</div>
                 </div>
                 
-                <div class="stat-card animate-fade-in">
+                <div class="stat-card glassmorphism hover-scale animate-fade-in">
                     <div class="stat-icon">
                         <i class="fas fa-book"></i>
                     </div>
@@ -169,11 +169,11 @@
                     <div class="stat-label">Programs</div>
                 </div>
                 
-                <div class="stat-card animate-fade-in">
+                <div class="stat-card glassmorphism hover-scale animate-fade-in">
                     <div class="stat-icon">
                         <i class="fas fa-award"></i>
                     </div>
-                    <div class="stat-number">70+</div>
+                    <div class="stat-number">85+</div>
                     <div class="stat-label">Years of Excellence</div>
                 </div>
             </div>
@@ -239,7 +239,7 @@
             </div>
             <div class="testimonial-slider">
                 <div class="testimonial-slide animate-fade-in">
-                    <div class="testimonial-card">
+                    <div class="testimonial-card glassmorphism neon-border">
                         <div class="testimonial-quote">
                             <i class="fas fa-quote-left"></i>
                         </div>
@@ -255,7 +255,7 @@
                 </div>
                 
                 <div class="testimonial-slide animate-fade-in">
-                    <div class="testimonial-card">
+                    <div class="testimonial-card glassmorphism neon-border">
                         <div class="testimonial-quote">
                             <i class="fas fa-quote-left"></i>
                         </div>
@@ -284,8 +284,8 @@
                 <h2>Ready to Join Our College?</h2>
                 <p>Apply now for admission to our various programs and start your journey towards a successful future.</p>
                 <div class="cta-buttons">
-                    <a href="admissions.html" class="btn btn-primary me-2">Apply for Admission</a>
-                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                    <a href="admissions.html" class="btn btn-primary btn-3d me-2">Apply for Admission</a>
+                    <a href="contact.html" class="btn btn-outline hover-glow">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -350,5 +350,26 @@
 
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+    <script src="js/particles.js"></script>
+    
+    <!-- Add ID for scroll functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add an ID to About section for scroll-down functionality
+            const aboutSection = document.querySelector('.about-preview');
+            if (aboutSection) {
+                aboutSection.id = 'explore';
+            }
+            
+            // Initialize CSS variables for random particle movement
+            const particles = document.querySelectorAll('.particle');
+            particles.forEach(particle => {
+                // Random movement direction
+                particle.style.setProperty('--move-x', (Math.random() * 2 - 1).toFixed(2));
+                particle.style.setProperty('--move-y', (Math.random() * 2 - 1).toFixed(2));
+                particle.style.setProperty('--rotation', Math.random() > 0.5 ? 1 : -1);
+            });
+        });
+    </script>
 </body>
 </html>
