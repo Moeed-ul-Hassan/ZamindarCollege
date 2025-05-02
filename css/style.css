@@ -1042,6 +1042,184 @@ img {
     z-index: 1;
 }
 
+/* Principal Message Section */
+.principal-section {
+    position: relative;
+    background-color: var(--secondary-bg);
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.principal-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.principal-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--tertiary-bg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    max-width: 300px;
+}
+
+.principal-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.principal-icon {
+    font-size: 5rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.principal-title {
+    margin-top: 15px;
+}
+
+.principal-title h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: var(--text-primary);
+}
+
+.principal-title p {
+    color: var(--text-secondary);
+    margin-bottom: 0;
+}
+
+.principal-message {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.message-content {
+    position: relative;
+    background-color: var(--tertiary-bg);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.message-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.message-content p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.principal-signature {
+    text-align: right;
+    font-family: 'Parisienne', cursive, var(--font-family-heading);
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: var(--accent-color);
+}
+
+/* Admissions Info Section */
+.admissions-info-section {
+    position: relative;
+    padding: 100px 0;
+    background-color: var(--primary-bg);
+    overflow: hidden;
+}
+
+.admissions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.admissions-card {
+    background-color: var(--tertiary-bg);
+    border-radius: 10px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.admissions-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent-color);
+}
+
+.admissions-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0 auto 25px;
+    transition: all 0.3s ease;
+}
+
+.admissions-card:hover .admissions-icon {
+    transform: rotateY(180deg);
+}
+
+.admissions-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.admissions-content p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.admissions-details {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.admissions-details li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.admissions-details li i {
+    margin-right: 10px;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    width: 25px;
+}
+
 /* Footer */
 .footer {
     position: relative;
