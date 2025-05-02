@@ -2276,9 +2276,6 @@ img {
     text-align: center;
     color: var(--text-primary);
 }
-    text-align: center;
-    font-size: 0.9rem;
-}
 
 .issue-thumbnail.winter {
     background: linear-gradient(45deg, #3498db, #2980b9);
