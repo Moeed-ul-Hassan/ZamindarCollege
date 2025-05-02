@@ -1,0 +1,13 @@
+<svg width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e63946" />
+      <stop offset="100%" stop-color="#ff8a00" />
+    </linearGradient>
+  </defs>
+  <rect width="45" height="45" x="5" y="7" rx="8" fill="url(#logoGradient)"/>
+  <path d="M20 15 L35 15 L27 30 Z" fill="#ffffff"/>
+  <path d="M23 25 L32 25 L27 35 Z" fill="#ffffff"/>
+  <text x="60" y="30" font-family="Montserrat, sans-serif" font-size="22" font-weight="800" fill="#ffffff">ZAMINDAR</text>
+  <text x="60" y="44" font-family="Poppins, sans-serif" font-size="12" fill="#b3b7d1">COLLEGE</text>
+</svg>
