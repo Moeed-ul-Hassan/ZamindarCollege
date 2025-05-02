@@ -93,6 +93,9 @@
                     <p>Zamindar College, Gujrat, established in 1938, is one of the premier educational institutions in Pakistan. With a rich history spanning over eight decades, we have been at the forefront of academic excellence, producing graduates who have excelled in various fields.</p>
                     <p>Our mission is to provide quality education that nurtures intellectual growth, fosters critical thinking, and builds character. We strive to create an environment that encourages creativity, innovation, and ethical leadership.</p>
                     <a href="about.html" class="btn btn-secondary">Learn More</a>
+                    <div class="about-image-stack">
+                        <img src="images/R (1)_enhanced.jfif" alt="Zamindar College Activities" class="about-stack-image animate-fade-in">
+                    </div>
                 </div>
                 <div class="col-lg-6 animate-fade-in">
                     <div class="image-frame floating-slow">
@@ -240,6 +243,149 @@
             </div>
         </div>
     </section>
+
+    <!-- College Magazine Section -->
+    <section class="section magazine-section">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2>College Magazine</h2>
+                <div class="heading-underline center"></div>
+                <p class="section-subheading">Explore our latest college publications</p>
+            </div>
+            <div class="magazine-showcase">
+                <div class="magazine-container">
+                    <div class="magazine-wrapper animate-fade-in">
+                        <div class="magazine">
+                            <div class="magazine-cover" id="current-magazine">
+                                <div class="magazine-effect"></div>
+                                <div class="magazine-spine"></div>
+                                <div class="magazine-title">Zamindar Chronicle</div>
+                                <div class="magazine-year">Spring 2023</div>
+                                <button class="btn-read-magazine" onclick="openMagazine()">Read Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="magazine-shadows"></div>
+                </div>
+                <div class="magazine-archive">
+                    <h3>Previous Editions</h3>
+                    <div class="archive-issues">
+                        <div class="archive-issue" onclick="changeMagazine('Winter 2022', 'Winter')">
+                            <div class="issue-thumbnail winter">
+                                <span>Winter 2022</span>
+                            </div>
+                        </div>
+                        <div class="archive-issue" onclick="changeMagazine('Fall 2022', 'Fall')">
+                            <div class="issue-thumbnail fall">
+                                <span>Fall 2022</span>
+                            </div>
+                        </div>
+                        <div class="archive-issue" onclick="changeMagazine('Summer 2022', 'Summer')">
+                            <div class="issue-thumbnail summer">
+                                <span>Summer 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-bg-shapes">
+            <div class="bg-shape-1"></div>
+            <div class="bg-shape-2"></div>
+        </div>
+    </section>
+
+    <!-- Magazine Viewer Modal -->
+    <div class="magazine-modal" id="magazineModal">
+        <div class="magazine-modal-content">
+            <span class="magazine-close" onclick="closeMagazine()">&times;</span>
+            <div class="magazine-viewer">
+                <div class="magazine-pages" id="magazinePages">
+                    <div class="magazine-page" id="page1">
+                        <div class="page-content">
+                            <h2>Zamindar Chronicle</h2>
+                            <h3>Spring 2023</h3>
+                            <p class="issue-intro">Welcome to the Spring 2023 edition of the Zamindar Chronicle, showcasing student achievements, college events, and academic excellence.</p>
+                            <div class="page-number">1</div>
+                        </div>
+                    </div>
+                    <div class="magazine-page" id="page2">
+                        <div class="page-content">
+                            <h3>From the Principal's Desk</h3>
+                            <p>Dear Students and Faculty,</p>
+                            <p>It gives me immense pleasure to present the Spring 2023 edition of our college magazine. This publication reflects the creative talents and intellectual achievements of our students and faculty.</p>
+                            <p>The past academic year has been exceptional in many ways. Our students have excelled in academics, sports, and cultural activities, bringing laurels to the institution.</p>
+                            <p>I congratulate the editorial team for their dedication and hard work in bringing out this wonderful publication.</p>
+                            <p class="signature">Principal<br>Zamindar College</p>
+                            <div class="page-number">2</div>
+                        </div>
+                    </div>
+                    <div class="magazine-page" id="page3">
+                        <div class="page-content">
+                            <h3>Academic Achievements</h3>
+                            <div class="achievement-item">
+                                <h4>Science Olympiad Winners</h4>
+                                <p>Our students secured top positions in the National Science Olympiad held in March 2023. Ahsan Khan (BSc Physics) won the gold medal in the physics category.</p>
+                            </div>
+                            <div class="achievement-item">
+                                <h4>Research Publications</h4>
+                                <p>Dr. Farooq Ahmed from the Chemistry Department published his research in the International Journal of Chemical Sciences. His work on sustainable chemical processes received significant recognition.</p>
+                            </div>
+                            <div class="page-number">3</div>
+                        </div>
+                    </div>
+                    <div class="magazine-page" id="page4">
+                        <div class="page-content">
+                            <h3>Sports Highlights</h3>
+                            <div class="achievement-item">
+                                <h4>Cricket Championship</h4>
+                                <p>Zamindar College Cricket Team won the Inter-College Cricket Championship for the third consecutive year, defeating Government College in the finals.</p>
+                            </div>
+                            <div class="achievement-item">
+                                <h4>Athletics Meet</h4>
+                                <p>Our athletes performed exceptionally well in the District Athletics Meet, winning 5 gold, 3 silver, and 4 bronze medals in various track and field events.</p>
+                            </div>
+                            <div class="page-number">4</div>
+                        </div>
+                    </div>
+                    <div class="magazine-page" id="page5">
+                        <div class="page-content">
+                            <h3>Literary Corner</h3>
+                            <div class="poem">
+                                <h4>Dawn at Zamindar</h4>
+                                <p class="poem-text">
+                                Morning breaks over historic halls,<br>
+                                Knowledge awakens within these walls.<br>
+                                Minds enlightened, futures bright,<br>
+                                In pursuit of wisdom, day and night.<br><br>
+                                Zamindar stands, proud and tall,<br>
+                                A beacon of learning for one and all.<br>
+                                </p>
+                                <p class="poem-author">- Hasan Ali, BA English</p>
+                            </div>
+                            <div class="page-number">5</div>
+                        </div>
+                    </div>
+                    <div class="magazine-page" id="page6">
+                        <div class="page-content">
+                            <h3>Art Gallery</h3>
+                            <p>The Fine Arts Department organized the Annual Art Exhibition in April 2023, showcasing remarkable talent in painting, sculpture, and digital art.</p>
+                            <div class="gallery-placeholder">
+                                <i class="fas fa-images gallery-icon"></i>
+                                <p>Student Artwork Gallery</p>
+                            </div>
+                            <div class="page-number">6</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-navigation">
+                    <button id="prevPage" onclick="prevPage()"><i class="fas fa-chevron-left"></i> Previous</button>
+                    <span id="pageCounter">Page 1 of 6</span>
+                    <button id="nextPage" onclick="nextPage()">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Testimonials Section -->
     <section class="section testimonial-section">
