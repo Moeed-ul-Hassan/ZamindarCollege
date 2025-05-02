@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize testimonial slider
     initTestimonialSlider();
     
+    // Initialize magazine viewer
+    initMagazineViewer();
+    
     // Add year to copyright
     document.getElementById('current-year').textContent = new Date().getFullYear();
 });
@@ -179,3 +182,150 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Magazine Viewer Functions
+function initMagazineViewer() {
+    // Initialize with first page active
+    if (document.getElementById('page1')) {
+        document.getElementById('page1').classList.add('active');
+        const prevBtn = document.getElementById('prevPage');
+        if (prevBtn) {
+            prevBtn.disabled = true;
+        }
+    }
+}
+
+function openMagazine() {
+    const modal = document.getElementById('magazineModal');
+    if (modal) {
+        modal.style.display = 'block';
+        // Reset to first page when opening
+        changePage(1);
+    }
+}
+
+function closeMagazine() {
+    const modal = document.getElementById('magazineModal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+function changePage(pageNum) {
+    const pages = document.querySelectorAll('.magazine-page');
+    const totalPages = pages.length;
+    const pageCounter = document.getElementById('pageCounter');
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+    
+    // Remove all classes
+    pages.forEach(page => {
+        page.classList.remove('active', 'prev', 'next', 'flipping');
+    });
+    
+    // Add appropriate classes
+    if (pageNum > 1) {
+        pages[pageNum - 2].classList.add('prev');
+    }
+    
+    pages[pageNum - 1].classList.add('active');
+    
+    if (pageNum < totalPages) {
+        pages[pageNum].classList.add('next');
+    }
+    
+    // Update counter
+    if (pageCounter) {
+        pageCounter.textContent = `Page ${pageNum} of ${totalPages}`;
+    }
+    
+    // Update button states
+    if (prevButton) {
+        prevButton.disabled = pageNum === 1;
+    }
+    
+    if (nextButton) {
+        nextButton.disabled = pageNum === totalPages;
+    }
+    
+    // Set current page in data attribute for navigation
+    const magazinePages = document.getElementById('magazinePages');
+    if (magazinePages) {
+        magazinePages.dataset.currentPage = pageNum;
+    }
+}
+
+function nextPage() {
+    const magazinePages = document.getElementById('magazinePages');
+    if (magazinePages) {
+        const currentPage = parseInt(magazinePages.dataset.currentPage || 1);
+        const totalPages = document.querySelectorAll('.magazine-page').length;
+        
+        if (currentPage < totalPages) {
+            // Add flipping animation to current page
+            const currentPageEl = document.getElementById(`page${currentPage}`);
+            if (currentPageEl) {
+                currentPageEl.classList.add('flipping');
+                
+                // Change page after animation
+                setTimeout(() => {
+                    changePage(currentPage + 1);
+                }, 300);
+            }
+        }
+    }
+}
+
+function prevPage() {
+    const magazinePages = document.getElementById('magazinePages');
+    if (magazinePages) {
+        const currentPage = parseInt(magazinePages.dataset.currentPage || 1);
+        
+        if (currentPage > 1) {
+            // Get the previous page and remove flipping class if it has it
+            const prevPageEl = document.getElementById(`page${currentPage - 1}`);
+            if (prevPageEl) {
+                prevPageEl.classList.remove('flipping');
+                changePage(currentPage - 1);
+            }
+        }
+    }
+}
+
+function changeMagazine(edition, season) {
+    const magazineCover = document.getElementById('current-magazine');
+    if (magazineCover) {
+        // Update title and year
+        const titleEl = magazineCover.querySelector('.magazine-title');
+        const yearEl = magazineCover.querySelector('.magazine-year');
+        
+        if (titleEl && yearEl) {
+            titleEl.textContent = 'Zamindar Chronicle';
+            yearEl.textContent = edition;
+        }
+        
+        // Change magazine cover style based on season
+        if (season === 'Winter') {
+            magazineCover.style.background = 'linear-gradient(45deg, #3498db, #2980b9)';
+        } else if (season === 'Fall') {
+            magazineCover.style.background = 'linear-gradient(45deg, #e67e22, #d35400)';
+        } else if (season === 'Summer') {
+            magazineCover.style.background = 'linear-gradient(45deg, #f1c40f, #f39c12)';
+        } else {
+            // Spring (default)
+            magazineCover.style.background = 'linear-gradient(45deg, var(--accent-color), var(--accent-color2))';
+        }
+        
+        // Add a little animation
+        magazineCover.animate(
+            [
+                { transform: 'scale(0.95)', opacity: 0.9 },
+                { transform: 'scale(1)', opacity: 1 }
+            ],
+            {
+                duration: 500,
+                easing: 'ease-out'
+            }
+        );
+    }
+}
