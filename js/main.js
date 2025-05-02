@@ -196,9 +196,17 @@ function initMagazineViewer() {
 }
 
 function openMagazine() {
-    // Redirect to Google Drive PDF viewer
-    const pdfUrl = "https://drive.google.com/file/d/1DFpKQ6KsZbpBVL4uODtBCuvRsFHlkOt2/view?usp=sharing";
-    window.open(pdfUrl, '_blank');
+    // Open the magazine modal to show our custom magazine viewer
+    const modal = document.getElementById('magazineModal');
+    if (modal) {
+        modal.style.display = 'flex';
+        // Reset to first page
+        changePage(1);
+    }
+    
+    // Alternatively, open the actual Shaheen magazine PDF
+    // const pdfUrl = "https://ia802909.us.archive.org/18/items/the-shaheen-2019-20/The%20shaheen%202019-20.pdf";
+    // window.open(pdfUrl, '_blank');
 }
 
 function closeMagazine() {
@@ -329,14 +337,16 @@ function changeMagazine(edition, season) {
         const button = magazineCover.querySelector('.btn-read-magazine');
         if (button) {
             button.onclick = function() {
-                let pdfUrl = "https://drive.google.com/file/d/1DFpKQ6KsZbpBVL4uODtBCuvRsFHlkOt2/view?usp=sharing"; // Default Spring 2023
+                // Use the actual Shaheen magazine PDF
+                let pdfUrl = "https://ia802909.us.archive.org/18/items/the-shaheen-2019-20/The%20shaheen%202019-20.pdf";
                 
+                // For different editions (2020-21, 2021-22, etc.) we would specify different links here
                 if (season === 'Winter') {
-                    pdfUrl = "https://drive.google.com/file/d/19sI0ZwJyKJeYAiH9RxXnDqGxI3qUSXOE/view?usp=sharing";
+                    pdfUrl = "https://ia802909.us.archive.org/18/items/the-shaheen-2019-20/The%20shaheen%202019-20.pdf";
                 } else if (season === 'Fall') {
-                    pdfUrl = "https://drive.google.com/file/d/1n62Zw8K1vzLnB9xOFQRNYHl0oB1C0wLM/view?usp=sharing";
+                    pdfUrl = "https://ia802909.us.archive.org/18/items/the-shaheen-2019-20/The%20shaheen%202019-20.pdf";
                 } else if (season === 'Summer') {
-                    pdfUrl = "https://drive.google.com/file/d/1EtWZJPRdVr6b7xyzIUhwl1HQOWNiVUjg/view?usp=sharing";
+                    pdfUrl = "https://ia802909.us.archive.org/18/items/the-shaheen-2019-20/The%20shaheen%202019-20.pdf";
                 }
                 
                 window.open(pdfUrl, '_blank');
