@@ -1,68 +1,80 @@
-<svg width="240" height="70" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7928CA" />
-      <stop offset="100%" stop-color="#00C6FF" />
+    <!-- Gradients -->
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff5676" />
+      <stop offset="100%" stop-color="#ff8aad" />
     </linearGradient>
-    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#b3b7d1" />
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4361ee" />
+      <stop offset="100%" stop-color="#7209b7" />
     </linearGradient>
+    <linearGradient id="flameGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9e00" />
+      <stop offset="100%" stop-color="#ff0069" />
+    </linearGradient>
+    
+    <!-- Filters -->
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2" result="blur" />
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="glow" />
-      <feBlend in="SourceGraphic" in2="glow" mode="normal" />
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="2" dy="2" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
     </filter>
   </defs>
   
-  <!-- Shield shape with gradient -->
-  <path d="M20,10 L55,10 L55,40 C55,55 37.5,60 37.5,60 C37.5,60 20,55 20,40 Z" 
-        fill="url(#logoGradient)" 
-        filter="url(#glow)" 
-        stroke="rgba(255,255,255,0.3)" 
-        stroke-width="1" />
-  
-  <!-- College Emblem: Book of Knowledge -->
-  <path d="M30,25 L45,25 L45,38 C45,38 37.5,40 37.5,40 C37.5,40 30,38 30,38 Z" 
-        fill="#ffffff" 
-        opacity="0.9" />
-  <path d="M37.5,25 L37.5,40" 
-        stroke="#13131f" 
-        stroke-width="1" />
-  
-  <!-- Torch of Knowledge -->
-  <path d="M37.5,18 L37.5,23" 
-        stroke="#ffffff" 
-        stroke-width="2" 
-        stroke-linecap="round" />
-  <path d="M34,15 C34,15 37.5,10 41,15" 
-        fill="transparent" 
-        stroke="#ffffff" 
-        stroke-width="2" 
-        stroke-linecap="round" />
-        
-  <!-- Est. 1938 -->
-  <text x="27" y="50" 
-        font-family="Montserrat, sans-serif" 
-        font-size="6" 
-        fill="#ffffff" 
-        text-anchor="middle">EST. 1938</text>
+  <!-- College Shield -->
+  <g transform="translate(30, 10)" filter="url(#dropShadow)">
+    <path d="M50,0 L90,20 L90,70 C90,85 70,100 50,110 C30,100 10,85 10,70 L10,20 Z" 
+          fill="url(#shieldGradient)" stroke="#7209b7" stroke-width="2" />
+          
+    <!-- Torch in Shield -->
+    <path d="M50,30 L50,80 M40,30 L60,30" stroke="#fff" stroke-width="3" stroke-linecap="round" />
+    <path d="M40,25 C45,15 55,15 60,25 C65,35 35,35 40,25 Z" fill="url(#flameGradient)" filter="url(#glow)" />
     
-  <!-- College Name with text gradient -->
-  <text x="70" y="32" 
-        font-family="Montserrat, sans-serif" 
-        font-size="24" 
-        font-weight="800" 
-        fill="url(#textGradient)"
-        filter="url(#glow)">ZAMINDAR</text>
-  <text x="70" y="48" 
-        font-family="Poppins, sans-serif" 
-        font-size="14" 
-        fill="#b3b7d1">COLLEGE</text>
-        
-  <!-- Decorative elements -->
-  <path d="M65,34 L210,34" 
-        stroke="url(#logoGradient)" 
-        stroke-width="1" 
-        opacity="0.5" />
+    <!-- Year -->
+    <text x="50" y="95" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">EST. 1938</text>
+  </g>
+  
+  <!-- College Name -->
+  <g transform="translate(120, 55)">
+    <text font-family="'Montserrat', sans-serif" font-size="28" font-weight="800" fill="url(#headerGradient)" filter="url(#dropShadow)">ZAMINDAR</text>
+    <text y="30" font-family="'Montserrat', sans-serif" font-size="26" font-weight="600" fill="#333" filter="url(#dropShadow)">COLLEGE</text>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <g transform="translate(350, 30)">
+    <circle cx="0" cy="0" r="15" fill="url(#flameGradient)" opacity="0.7" filter="url(#glow)">
+      <animate attributeName="r" values="15;17;15" dur="3s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  <g transform="translate(320, 70)">
+    <circle cx="0" cy="0" r="10" fill="url(#shieldGradient)" opacity="0.7" filter="url(#glow)">
+      <animate attributeName="r" values="10;12;10" dur="4s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  <g transform="translate(360, 80)">
+    <circle cx="0" cy="0" r="8" fill="#ff5676" opacity="0.7" filter="url(#glow)">
+      <animate attributeName="r" values="8;10;8" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Moving Lines (abstract knowledge) -->
+  <path d="M330,20 Q340,40 330,60 Q320,80 340,100" stroke="url(#headerGradient)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6">
+    <animate attributeName="d" 
+             values="M330,20 Q340,40 330,60 Q320,80 340,100;
+                     M330,20 Q350,40 330,60 Q310,80 340,100;
+                     M330,20 Q340,40 330,60 Q320,80 340,100" 
+             dur="8s" repeatCount="indefinite" />
+  </path>
 </svg>
