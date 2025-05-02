@@ -196,12 +196,9 @@ function initMagazineViewer() {
 }
 
 function openMagazine() {
-    const modal = document.getElementById('magazineModal');
-    if (modal) {
-        modal.style.display = 'block';
-        // Reset to first page when opening
-        changePage(1);
-    }
+    // Redirect to Google Drive PDF viewer
+    const pdfUrl = "https://drive.google.com/file/d/1DFpKQ6KsZbpBVL4uODtBCuvRsFHlkOt2/view?usp=sharing";
+    window.open(pdfUrl, '_blank');
 }
 
 function closeMagazine() {
@@ -327,5 +324,23 @@ function changeMagazine(edition, season) {
                 easing: 'ease-out'
             }
         );
+        
+        // Update the Read Now button to open a different PDF based on the edition
+        const button = magazineCover.querySelector('.btn-read-magazine');
+        if (button) {
+            button.onclick = function() {
+                let pdfUrl = "https://drive.google.com/file/d/1DFpKQ6KsZbpBVL4uODtBCuvRsFHlkOt2/view?usp=sharing"; // Default Spring 2023
+                
+                if (season === 'Winter') {
+                    pdfUrl = "https://drive.google.com/file/d/19sI0ZwJyKJeYAiH9RxXnDqGxI3qUSXOE/view?usp=sharing";
+                } else if (season === 'Fall') {
+                    pdfUrl = "https://drive.google.com/file/d/1n62Zw8K1vzLnB9xOFQRNYHl0oB1C0wLM/view?usp=sharing";
+                } else if (season === 'Summer') {
+                    pdfUrl = "https://drive.google.com/file/d/1EtWZJPRdVr6b7xyzIUhwl1HQOWNiVUjg/view?usp=sharing";
+                }
+                
+                window.open(pdfUrl, '_blank');
+            };
+        }
     }
 }
