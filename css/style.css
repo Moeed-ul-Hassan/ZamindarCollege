@@ -1654,6 +1654,73 @@ img {
     object-fit: cover;
 }
 
+.facility-icon {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 4rem;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.3s ease;
+}
+
+.facility-card:hover .facility-icon {
+    background-color: var(--accent-color-dark);
+    transform: translateY(-5px);
+}
+
+/* Facility Icon Color Variations */
+.facility-color-1 {
+    background-color: var(--accent-color);
+}
+
+.facility-color-2 {
+    background-color: var(--accent-color2);
+}
+
+.facility-color-3 {
+    background-color: var(--accent-color3);
+}
+
+.facility-color-4 {
+    background-color: #FF8F3F; /* Orange */
+}
+
+.facility-color-5 {
+    background-color: #7F5AF0; /* Purple */
+}
+
+.facility-color-6 {
+    background-color: #FF5C77; /* Pink */
+}
+
+.facility-card:hover .facility-color-1 {
+    background-color: var(--accent-color-dark);
+}
+
+.facility-card:hover .facility-color-2 {
+    background-color: var(--accent-color2-dark);
+}
+
+.facility-card:hover .facility-color-3 {
+    background-color: #81C866; /* Darker green */
+}
+
+.facility-card:hover .facility-color-4 {
+    background-color: #E57F35; /* Darker orange */
+}
+
+.facility-card:hover .facility-color-5 {
+    background-color: #694DC9; /* Darker purple */
+}
+
+.facility-card:hover .facility-color-6 {
+    background-color: #E34C65; /* Darker pink */
+}
+
 .facility-content {
     padding: 25px;
 }
