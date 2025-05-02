@@ -1,0 +1,13 @@
+<svg width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text { font-family: 'Arial', sans-serif; fill: #ffffff; }
+    .text-large { font-size: 24px; font-weight: bold; }
+    .text-small { font-size: 12px; }
+    .accent { fill: #ab0200; }
+  </style>
+  <rect width="50" height="50" x="5" y="5" rx="5" class="accent"/>
+  <text x="65" y="30" class="text text-large">Zamindar</text>
+  <text x="65" y="50" class="text text-small">College</text>
+  <path d="M20 15 L40 15 L30 35 Z" fill="#ffffff"/>
+  <path d="M25 30 L35 30 L30 40 Z" fill="#ffffff"/>
+</svg>

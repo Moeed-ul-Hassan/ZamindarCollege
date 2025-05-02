@@ -1,0 +1,541 @@
+{% extends "layout.html" %}
+
+{% block title %}Admissions - Zamindar College{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1920x1080/?university,admission');">
+    <div class="container">
+        <h1 class="animate-fade-in">Admissions</h1>
+        <p class="animate-fade-in">Start your journey towards academic excellence with Zamindar College</p>
+    </div>
+</section>
+
+<!-- Introduction Section -->
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center animate-fade-in">
+                <h2>Welcome to Zamindar College Admissions</h2>
+                <p>We are pleased that you are considering Zamindar College for your education. Our admissions process is designed to identify students who are not only academically capable but also possess leadership qualities, diverse talents, and a commitment to personal growth.</p>
+                <p>We strive to make our admissions process transparent, fair, and accessible to all deserving candidates. This page provides information about admission requirements, application procedures, important dates, and financial aid opportunities.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Programs Offered Section -->
+<section class="section bg-secondary">
+    <div class="container">
+        <h2 class="section-title animate-fade-in">Programs Offered</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4 animate-fade-in">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Intermediate Programs</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">F.Sc (Pre-Medical)</li>
+                            <li class="mb-2">F.Sc (Pre-Engineering)</li>
+                            <li class="mb-2">F.Sc (General Science)</li>
+                            <li class="mb-2">F.A (Various combinations)</li>
+                            <li>I.Com</li>
+                        </ul>
+                        <p class="mt-3">Duration: 2 years</p>
+                        <a href="/academics" class="btn btn-sm btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 animate-fade-in">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Bachelor's Programs</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">B.Sc (Various combinations)</li>
+                            <li class="mb-2">B.A (Various combinations)</li>
+                            <li>B.Com</li>
+                        </ul>
+                        <p class="mt-3">Duration: 2 years (after Intermediate)</p>
+                        <a href="/academics" class="btn btn-sm btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 animate-fade-in">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Associate Degree Programs</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">ADP in Computer Science</li>
+                            <li class="mb-2">ADP in Business Administration</li>
+                            <li>ADP in Education</li>
+                        </ul>
+                        <p class="mt-3">Duration: 2 years (after Intermediate)</p>
+                        <a href="/academics" class="btn btn-sm btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Admission Requirements Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title animate-fade-in">Admission Requirements</h2>
+        
+        <!-- Intermediate Admission Requirements -->
+        <div class="row mb-5">
+            <div class="col-lg-4 mb-4 mb-lg-0 animate-fade-in">
+                <img src="https://source.unsplash.com/random/600x400/?students,application" alt="Intermediate Admissions" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-8 animate-fade-in">
+                <h3>Intermediate Programs</h3>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Eligibility Criteria</h5>
+                        <ul>
+                            <li>Passing certificate of Matriculation or equivalent examination with minimum 60% marks</li>
+                            <li>For F.Sc Pre-Medical: At least 60% marks in Science subjects</li>
+                            <li>For F.Sc Pre-Engineering: At least 60% marks in Science subjects with Mathematics</li>
+                            <li>For F.Sc General Science: At least 55% marks in Science subjects</li>
+                            <li>For F.A: At least 50% marks in relevant subjects</li>
+                            <li>For I.Com: At least 50% marks in relevant subjects</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Required Documents</h5>
+                        <ul>
+                            <li>Attested copy of Matriculation certificate and detailed marks certificate</li>
+                            <li>Character certificate from the institution last attended</li>
+                            <li>Four recent passport-sized photographs</li>
+                            <li>Copy of CNIC or Form-B</li>
+                            <li>Migration certificate (if applicable)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bachelor's Admission Requirements -->
+        <div class="row">
+            <div class="col-lg-8 animate-fade-in">
+                <h3>Bachelor's Programs</h3>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Eligibility Criteria</h5>
+                        <ul>
+                            <li>Passing certificate of Intermediate or equivalent examination with minimum 45% marks</li>
+                            <li>For B.Sc: At least 45% marks in relevant science subjects</li>
+                            <li>For B.A: At least 45% marks in relevant subjects</li>
+                            <li>For B.Com: At least 45% marks in I.Com or equivalent</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Required Documents</h5>
+                        <ul>
+                            <li>Attested copy of Intermediate certificate and detailed marks certificate</li>
+                            <li>Attested copy of Matriculation certificate</li>
+                            <li>Character certificate from the institution last attended</li>
+                            <li>Four recent passport-sized photographs</li>
+                            <li>Copy of CNIC</li>
+                            <li>Migration certificate (if applicable)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4 mb-lg-0 animate-fade-in">
+                <img src="https://source.unsplash.com/random/600x400/?university,admission" alt="Bachelor's Admissions" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Application Process Section -->
+<section class="section bg-secondary">
+    <div class="container">
+        <h2 class="section-title animate-fade-in">Application Process</h2>
+        <div class="row">
+            <div class="col-lg-10 mx-auto animate-fade-in">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3 mb-3 mb-md-0 text-center">
+                                <div class="bg-dark rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-file-alt fa-2x text-primary"></i>
+                                </div>
+                                <h5 class="mt-3">Step 1</h5>
+                                <p>Obtain Application Form</p>
+                            </div>
+                            <div class="col-md-3 mb-3 mb-md-0 text-center">
+                                <div class="bg-dark rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-edit fa-2x text-primary"></i>
+                                </div>
+                                <h5 class="mt-3">Step 2</h5>
+                                <p>Complete Application</p>
+                            </div>
+                            <div class="col-md-3 mb-3 mb-md-0 text-center">
+                                <div class="bg-dark rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-paper-plane fa-2x text-primary"></i>
+                                </div>
+                                <h5 class="mt-3">Step 3</h5>
+                                <p>Submit Documents</p>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <div class="bg-dark rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-check-circle fa-2x text-primary"></i>
+                                </div>
+                                <h5 class="mt-3">Step 4</h5>
+                                <p>Receive Admission</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <h5>Detailed Process:</h5>
+                        <ol>
+                            <li><strong>Obtain Application Form:</strong> Application forms can be obtained from the college Admissions Office or downloaded from the college website during the admission period.</li>
+                            <li><strong>Complete Application:</strong> Fill out the application form completely and attach all required documents. Incomplete applications may be rejected.</li>
+                            <li><strong>Submit Documents:</strong> Submit the completed application form along with required documents and application fee to the Admissions Office.</li>
+                            <li><strong>Merit List:</strong> The college will display the merit list on the notice board and website. Selected candidates will be informed via SMS/email.</li>
+                            <li><strong>Fee Payment:</strong> Selected candidates must pay the admission fee within the specified deadline to secure their admission.</li>
+                            <li><strong>Orientation:</strong> Attend the orientation program to learn about college policies, facilities, and academic expectations.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Important Dates Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title animate-fade-in">Important Dates for 2023-24 Admissions</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 animate-fade-in">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-dark table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Event</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Application Forms Available</td>
+                                    <td>June 1, 2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Last Date for Form Submission</td>
+                                    <td>July 15, 2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Merit List Display</td>
+                                    <td>July 25, 2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Fee Payment Deadline</td>
+                                    <td>August 5, 2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Classes Begin</td>
+                                    <td>August 15, 2023</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="small">Note: Dates are subject to change. Please check the college notice board or website for any updates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fee Structure Section -->
+<section class="section bg-secondary">
+    <div class="container">
+        <h2 class="section-title animate-fade-in">Fee Structure</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4 animate-fade-in">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Intermediate Programs</h4>
+                        <table class="table table-dark table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Fee Type</th>
+                                    <th>Amount (PKR)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Admission Fee (One-time)</td>
+                                    <td>5,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuition Fee (Per Semester)</td>
+                                    <td>15,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Laboratory Fee (Per Semester)</td>
+                                    <td>3,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Library Fee (Per Year)</td>
+                                    <td>2,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Examination Fee (Per Year)</td>
+                                    <td>3,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 animate-fade-in">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Bachelor's Programs</h4>
+                        <table class="table table-dark table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Fee Type</th>
+                                    <th>Amount (PKR)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Admission Fee (One-time)</td>
+                                    <td>7,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuition Fee (Per Semester)</td>
+                                    <td>20,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Laboratory Fee (Per Semester)</td>
+                                    <td>4,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Library Fee (Per Year)</td>
+                                    <td>2,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Examination Fee (Per Year)</td>
+                                    <td>4,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 mx-auto animate-fade-in">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Payment Information</h5>
+                        <p>Fees can be paid through the following methods:</p>
+                        <ul>
+                            <li>Direct deposit at the college accounts office</li>
+                            <li>Bank transfer to college account</li>
+                            <li>Online payment through the college portal (coming soon)</li>
+                        </ul>
+                        <p class="small mt-3">Note: All fees are subject to change. Additional charges may apply for specific courses, facilities, or activities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scholarships Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title animate-fade-in">Scholarships & Financial Aid</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto animate-fade-in">
+                <p class="text-center mb-4">Zamindar College is committed to making quality education accessible to deserving students regardless of their financial background. We offer various scholarships and financial aid options to support our students.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4 animate-fade-in">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-award fa-3x mb-3 text-primary"></i>
+                        <h4 class="card-title">Merit Scholarships</h4>
+                        <p class="card-text">Based on academic performance in previous examinations.</p>
+                        <ul class="text-start list-unstyled mt-3">
+                            <li><i class="fas fa-check text-primary me-2"></i> 100% tuition fee waiver for students with 90%+ marks</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> 75% tuition fee waiver for students with 85-89% marks</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> 50% tuition fee waiver for students with 80-84% marks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 animate-fade-in">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-hand-holding-heart fa-3x mb-3 text-primary"></i>
+                        <h4 class="card-title">Need-Based Financial Aid</h4>
+                        <p class="card-text">Based on the financial circumstances of the student's family.</p>
+                        <ul class="text-start list-unstyled mt-3">
+                            <li><i class="fas fa-check text-primary me-2"></i> Tuition fee waivers ranging from 25% to 75%</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Monthly stipends for extremely deserving students</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Book and stationery allowance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 animate-fade-in">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-star fa-3x mb-3 text-primary"></i>
+                        <h4 class="card-title">Special Scholarships</h4>
+                        <p class="card-text">For specific categories of students.</p>
+                        <ul class="text-start list-unstyled mt-3">
+                            <li><i class="fas fa-check text-primary me-2"></i> Sports scholarships for outstanding athletes</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Scholarships for children of college staff</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Scholarships for siblings (when two or more siblings are enrolled)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-8 mx-auto animate-fade-in">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">How to Apply for Scholarships</h5>
+                        <ol>
+                            <li>Obtain the scholarship application form from the Financial Aid Office or download it from the college website.</li>
+                            <li>Submit the completed form along with all required documents by the specified deadline.</li>
+                            <li>For need-based financial aid, be prepared for an interview with the Scholarship Committee.</li>
+                            <li>Decisions regarding scholarships are made by the Scholarship Committee and are announced within two weeks after the application deadline.</li>
+                        </ol>
+                        <p class="small mt-3">Note: Continuation of scholarships is subject to maintaining specified academic performance and adherence to college rules and regulations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section bg-secondary">
+    <div class="container">
+        <h2 class="section-title animate-fade-in">Frequently Asked Questions</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 animate-fade-in">
+                <div class="accordion" id="admissionsFaq">
+                    <div class="accordion-item bg-dark mb-3 border-0">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Can I apply for more than one program?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#admissionsFaq">
+                            <div class="accordion-body">
+                                Yes, you can apply for up to three programs in order of preference. However, you need to submit only one application form indicating your preferences.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-dark mb-3 border-0">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button bg-dark text-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Is there any entrance test for admission?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#admissionsFaq">
+                            <div class="accordion-body">
+                                Generally, admissions are granted based on merit determined by previous academic records. However, for certain programs, an entrance test or interview may be conducted to assess the candidate's aptitude and knowledge.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-dark mb-3 border-0">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button bg-dark text-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Can I apply online?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#admissionsFaq">
+                            <div class="accordion-body">
+                                Currently, we accept applications in person at the Admissions Office. However, we are working on implementing an online application system which will be available soon.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-dark mb-3 border-0">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button bg-dark text-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                What if I miss the application deadline?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#admissionsFaq">
+                            <div class="accordion-body">
+                                Late applications may be considered if seats are available after the regular admission process. However, it is always advisable to apply within the specified deadline to avoid any complications.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-dark mb-3 border-0">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button bg-dark text-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Do you offer any hostel facilities?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#admissionsFaq">
+                            <div class="accordion-body">
+                                Yes, Zamindar College provides hostel facilities for both male and female students. However, hostel seats are limited and are allocated on a first-come, first-served basis. Students requiring hostel accommodation should indicate this in their application form.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact for Admissions Section -->
+<section class="section text-center">
+    <div class="container">
+        <h2 class="animate-fade-in">Still Have Questions?</h2>
+        <p class="animate-fade-in">Our admissions team is here to help you navigate the application process and answer any questions you may have.</p>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-4 mb-4 animate-fade-in">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-phone fa-3x mb-3 text-primary"></i>
+                        <h4 class="card-title">Call Us</h4>
+                        <p class="card-text">+92-55-9200272</p>
+                        <p class="card-text">Monday to Friday, 9:00 AM - 4:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 animate-fade-in">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-envelope fa-3x mb-3 text-primary"></i>
+                        <h4 class="card-title">Email Us</h4>
+                        <p class="card-text">admissions@zamindarcollege.edu.pk</p>
+                        <p class="card-text">We respond within 24-48 hours</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 animate-fade-in">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-map-marker-alt fa-3x mb-3 text-primary"></i>
+                        <h4 class="card-title">Visit Us</h4>
+                        <p class="card-text">Admissions Office, Zamindar College</p>
+                        <p class="card-text">Gujrat Road, Gujranwala, Punjab</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4 animate-fade-in">
+            <a href="/contact" class="btn btn-primary">Contact Us</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

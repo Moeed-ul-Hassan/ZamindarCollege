@@ -1,0 +1,408 @@
+:root {
+    /* Dark theme color palette */
+    --primary-bg: #121212;
+    --secondary-bg: #1e1e1e;
+    --tertiary-bg: #2d2d2d;
+    --primary-text: #ffffff;
+    --secondary-text: #b3b3b3;
+    --accent-color: #ab0200; /* Dark red for Zamindar College */
+    --accent-color-light: #ff0400;
+    --link-color: #ab0200;
+    --link-hover-color: #ff0400;
+    --border-color: #333333;
+    --card-bg: #1e1e1e;
+    --nav-bg: rgba(18, 18, 18, 0.95);
+    --footer-bg: #0a0a0a;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    
+    /* Typography */
+    --font-family-heading: 'Poppins', sans-serif;
+    --font-family-body: 'Open Sans', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-body);
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 70px; /* Space for footer */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-text);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+    color: var(--secondary-text);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container adjustments */
+.container {
+    max-width: 1200px;
+    padding: var(--spacing-lg);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--nav-bg) !important;
+    box-shadow: 0 2px 10px var(--shadow-color);
+    padding: var(--spacing-sm) var(--spacing-md);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--secondary-text);
+    font-weight: 500;
+    padding: var(--spacing-sm) var(--spacing-md);
+    transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover, 
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--accent-color-light);
+}
+
+.navbar-toggler {
+    border: none;
+    padding: var(--spacing-sm);
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1920x1080/?university') no-repeat center center/cover;
+    color: var(--primary-text);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+    color: var(--primary-text);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    padding: 0.7rem 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color-light);
+    border-color: var(--accent-color-light);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(171, 2, 0, 0.3);
+}
+
+/* Cards */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: var(--spacing-lg);
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+.card-title {
+    color: var(--primary-text);
+    font-weight: 600;
+}
+
+.card-text {
+    color: var(--secondary-text);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Section Styling */
+.section {
+    padding: var(--spacing-xl) 0;
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: var(--spacing-sm) auto 0;
+}
+
+/* Faculty/Staff Section */
+.faculty-card {
+    text-align: center;
+    padding: var(--spacing-md);
+}
+
+.faculty-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: var(--spacing-md);
+    border: 3px solid var(--accent-color);
+}
+
+/* News & Events */
+.news-date {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Gallery */
+.gallery-item {
+    margin-bottom: var(--spacing-lg);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay i {
+    color: var(--primary-text);
+    font-size: 2rem;
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea {
+    background-color: var(--tertiary-bg);
+    border: 1px solid var(--border-color);
+    color: var(--primary-text);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-radius: 4px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: var(--tertiary-bg);
+    border-color: var(--accent-color);
+    color: var(--primary-text);
+    box-shadow: none;
+}
+
+.contact-form ::placeholder {
+    color: var(--secondary-text);
+}
+
+.contact-info {
+    background-color: var(--secondary-bg);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    height: 100%;
+}
+
+.contact-info i {
+    color: var(--accent-color);
+    margin-right: var(--spacing-sm);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--secondary-text);
+    padding: var(--spacing-lg) 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: var(--secondary-text);
+}
+
+.footer a:hover {
+    color: var(--primary-text);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.social-icons {
+    font-size: 1.5rem;
+}
+
+.social-icons a {
+    margin-right: var(--spacing-md);
+}
+
+/* Watermark */
+.watermark {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.7;
+    font-size: 12px;
+    z-index: 1000;
+    color: var(--secondary-text);
+    pointer-events: none;
+}
+
+/* Scroll to top button */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-color);
+    color: var(--primary-text);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.scroll-top.show {
+    opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .container {
+        padding: var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .section {
+        padding: var(--spacing-lg) 0;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-bottom: 120px; /* More space for footer on mobile */
+    }
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+}

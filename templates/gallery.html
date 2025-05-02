@@ -1,0 +1,452 @@
+{% extends "layout.html" %}
+
+{% block title %}Gallery - Zamindar College{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1920x1080/?university,campus');">
+    <div class="container">
+        <h1 class="animate-fade-in">Photo Gallery</h1>
+        <p class="animate-fade-in">Explore our campus life and events through images</p>
+    </div>
+</section>
+
+<!-- Introduction Section -->
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center animate-fade-in">
+                <h2>Visual Journey Through Zamindar College</h2>
+                <p>Our gallery offers a glimpse into the vibrant campus life, academic events, cultural festivities, and sports activities at Zamindar College. These images capture the essence of our college community and the diverse educational experiences we provide.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Filters -->
+<section class="section bg-secondary">
+    <div class="container">
+        <div class="row justify-content-center mb-4 animate-fade-in">
+            <div class="col-lg-8">
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <button class="btn btn-primary filter-button" data-filter="all">All</button>
+                    <button class="btn btn-outline-light filter-button" data-filter="campus">Campus</button>
+                    <button class="btn btn-outline-light filter-button" data-filter="events">Events</button>
+                    <button class="btn btn-outline-light filter-button" data-filter="academic">Academic</button>
+                    <button class="btn btn-outline-light filter-button" data-filter="sports">Sports</button>
+                    <button class="btn btn-outline-light filter-button" data-filter="cultural">Cultural</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Campus Gallery Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title animate-fade-in">Campus Views</h2>
+        <div class="row gallery-container">
+            <!-- Gallery Item 1 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-campus">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?university,building" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?university,building" data-title="Main Building" data-desc="The historic main building of Zamindar College, established in 1952, showcases the colonial architectural style with modern renovations.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?university,building" class="card-img-top" alt="Main Building">
+                        <div class="card-body">
+                            <h5 class="card-title">Main Building</h5>
+                            <p class="card-text">The historic main building of Zamindar College, showcasing colonial architectural style.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 2 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-campus">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?library,books" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?library,books" data-title="College Library" data-desc="Our well-stocked library houses over 50,000 books, journals, and digital resources, providing a quiet and conducive environment for reading and research.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?library,books" class="card-img-top" alt="College Library">
+                        <div class="card-body">
+                            <h5 class="card-title">College Library</h5>
+                            <p class="card-text">Our well-stocked library houses over 50,000 books and resources.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 3 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-campus">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?science,laboratory" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?science,laboratory" data-title="Science Laboratory" data-desc="Our state-of-the-art science laboratories are equipped with modern apparatus to facilitate hands-on learning and practical experiments for our students.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?science,laboratory" class="card-img-top" alt="Science Laboratory">
+                        <div class="card-body">
+                            <h5 class="card-title">Science Laboratory</h5>
+                            <p class="card-text">Our state-of-the-art science laboratories with modern equipment.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 4 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-sports">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?cricket,field" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?cricket,field" data-title="Cricket Ground" data-desc="Our spacious cricket ground with well-maintained pitches is the venue for numerous inter-collegiate tournaments and friendly matches throughout the academic year.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?cricket,field" class="card-img-top" alt="Cricket Ground">
+                        <div class="card-body">
+                            <h5 class="card-title">Cricket Ground</h5>
+                            <p class="card-text">Our spacious cricket ground hosts numerous tournaments throughout the year.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 5 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-campus">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?computer,lab" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?computer,lab" data-title="Computer Laboratory" data-desc="Our modern computer labs are equipped with the latest hardware and software, providing students with hands-on experience in computer applications and programming.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?computer,lab" class="card-img-top" alt="Computer Laboratory">
+                        <div class="card-body">
+                            <h5 class="card-title">Computer Laboratory</h5>
+                            <p class="card-text">Modern computer labs with the latest hardware and software.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 6 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-campus">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?cafeteria" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?cafeteria" data-title="College Cafeteria" data-desc="Our cafeteria provides nutritious and affordable meals in a comfortable environment where students can relax and socialize during breaks.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?cafeteria" class="card-img-top" alt="College Cafeteria">
+                        <div class="card-body">
+                            <h5 class="card-title">College Cafeteria</h5>
+                            <p class="card-text">A comfortable environment where students can relax and enjoy meals.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Events Gallery Section -->
+<section class="section bg-secondary">
+    <div class="container">
+        <h2 class="section-title animate-fade-in">Events & Celebrations</h2>
+        <div class="row gallery-container">
+            <!-- Gallery Item 7 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-events filter-academic">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?graduation,ceremony" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?graduation,ceremony" data-title="Annual Convocation Ceremony" data-desc="Our annual convocation ceremony celebrates the achievements of our graduates as they complete their academic journey at Zamindar College.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?graduation,ceremony" class="card-img-top" alt="Convocation Ceremony">
+                        <div class="card-body">
+                            <h5 class="card-title">Annual Convocation</h5>
+                            <p class="card-text">Celebrating the achievements of our graduates each year.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 8 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-events filter-cultural">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?cultural,festival" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?cultural,festival" data-title="Cultural Festival" data-desc="Our annual cultural festival showcases the diverse talents of our students through music, dance, drama, and other performances.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?cultural,festival" class="card-img-top" alt="Cultural Festival">
+                        <div class="card-body">
+                            <h5 class="card-title">Cultural Festival</h5>
+                            <p class="card-text">Showcasing student talents through performances and exhibitions.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 9 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-events filter-sports">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?sports,day" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?sports,day" data-title="Annual Sports Day" data-desc="Students participate in various athletic competitions and team sports, showcasing their physical prowess and sporting spirit during our Annual Sports Day.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?sports,day" class="card-img-top" alt="Sports Day">
+                        <div class="card-body">
+                            <h5 class="card-title">Annual Sports Day</h5>
+                            <p class="card-text">Competitions showcasing athletic talents and team spirit.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Academic Activities Gallery Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title animate-fade-in">Academic Activities</h2>
+        <div class="row gallery-container">
+            <!-- Gallery Item 10 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-academic">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?science,exhibition" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?science,exhibition" data-title="Science Exhibition" data-desc="Students showcase their innovative science projects at our annual Science Exhibition, demonstrating creativity and scientific thinking.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?science,exhibition" class="card-img-top" alt="Science Exhibition">
+                        <div class="card-body">
+                            <h5 class="card-title">Science Exhibition</h5>
+                            <p class="card-text">Innovative projects demonstrating students' scientific knowledge.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 11 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-academic">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?seminar,conference" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?seminar,conference" data-title="Academic Seminar" data-desc="Distinguished guests and faculty members share their knowledge and expertise during our academic seminars and conferences.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?seminar,conference" class="card-img-top" alt="Academic Seminar">
+                        <div class="card-body">
+                            <h5 class="card-title">Academic Seminar</h5>
+                            <p class="card-text">Expert speakers sharing knowledge with students and faculty.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 12 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-academic">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?debate,competition" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?debate,competition" data-title="Debate Competition" data-desc="Our debate competitions foster critical thinking, public speaking skills, and confidence among students as they articulate their perspectives on various topics.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?debate,competition" class="card-img-top" alt="Debate Competition">
+                        <div class="card-body">
+                            <h5 class="card-title">Debate Competition</h5>
+                            <p class="card-text">Students demonstrating critical thinking and articulation skills.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cultural Events Gallery Section -->
+<section class="section bg-secondary">
+    <div class="container">
+        <h2 class="section-title animate-fade-in">Cultural Events</h2>
+        <div class="row gallery-container">
+            <!-- Gallery Item 13 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-cultural">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?music,performance" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?music,performance" data-title="Music Performance" data-desc="Students showcasing their musical talents during our cultural events, performing both traditional and contemporary pieces.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?music,performance" class="card-img-top" alt="Music Performance">
+                        <div class="card-body">
+                            <h5 class="card-title">Music Performance</h5>
+                            <p class="card-text">Students showcasing their musical talents during cultural events.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 14 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-cultural filter-events">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?dance,performance" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?dance,performance" data-title="Dance Performance" data-desc="Our students perform various traditional and modern dance forms, celebrating our rich cultural heritage and artistic expression.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?dance,performance" class="card-img-top" alt="Dance Performance">
+                        <div class="card-body">
+                            <h5 class="card-title">Dance Performance</h5>
+                            <p class="card-text">Cultural expressions through traditional and modern dance forms.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 15 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-cultural filter-events">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?theater,drama" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?theater,drama" data-title="Theatrical Production" data-desc="Our drama society regularly stages theatrical productions, allowing students to explore their acting talents and creative expression.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?theater,drama" class="card-img-top" alt="Theatrical Production">
+                        <div class="card-body">
+                            <h5 class="card-title">Theatrical Production</h5>
+                            <p class="card-text">Drama performances showcasing students' acting and creative talents.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sports & Recreation Gallery Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title animate-fade-in">Sports & Recreation</h2>
+        <div class="row gallery-container">
+            <!-- Gallery Item 16 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-sports">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?basketball,game" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?basketball,game" data-title="Basketball Match" data-desc="Our basketball team competes in various inter-collegiate tournaments, demonstrating teamwork, skill, and sportsmanship.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?basketball,game" class="card-img-top" alt="Basketball Match">
+                        <div class="card-body">
+                            <h5 class="card-title">Basketball Match</h5>
+                            <p class="card-text">Inter-collegiate basketball competitions foster teamwork and skill.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 17 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-sports">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?football,soccer" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?football,soccer" data-title="Football Tournament" data-desc="Our annual football tournament brings together teams from various departments, creating a spirit of healthy competition and camaraderie.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?football,soccer" class="card-img-top" alt="Football Tournament">
+                        <div class="card-body">
+                            <h5 class="card-title">Football Tournament</h5>
+                            <p class="card-text">Annual tournaments bringing together teams in healthy competition.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 18 -->
+            <div class="col-md-6 col-lg-4 mb-4 animate-fade-in gallery-item filter-sports filter-events">
+                <div class="card h-100">
+                    <a href="https://source.unsplash.com/random/800x600/?trophy,ceremony" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://source.unsplash.com/random/1200x900/?trophy,ceremony" data-title="Sports Awards Ceremony" data-desc="Recognizing athletic excellence and sportsmanship during our annual sports awards ceremony, celebrating the achievements of our student athletes.">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <img src="https://source.unsplash.com/random/800x600/?trophy,ceremony" class="card-img-top" alt="Sports Awards">
+                        <div class="card-body">
+                            <h5 class="card-title">Sports Awards Ceremony</h5>
+                            <p class="card-text">Recognizing athletic excellence and sportsmanship achievements.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Image Modal -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title" id="galleryModalLabel">Image Title</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="" class="img-fluid rounded" id="modalImage" alt="Gallery Image">
+                <p class="mt-3" id="modalDescription">Image description will appear here.</p>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Submit Photos Section -->
+<section class="section bg-secondary text-center">
+    <div class="container">
+        <h2 class="animate-fade-in">Share Your Memories</h2>
+        <p class="animate-fade-in">Are you a current student or alumnus with photos from campus events? We'd love to feature them in our gallery.</p>
+        <a href="/contact" class="btn btn-primary mt-3 animate-fade-in">Submit Your Photos</a>
+    </div>
+</section>
+
+{% block additional_scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Gallery Filtering
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('btn-primary', 'active'));
+                filterButtons.forEach(btn => btn.classList.add('btn-outline-light'));
+                this.classList.remove('btn-outline-light');
+                this.classList.add('btn-primary', 'active');
+                
+                const filter = this.getAttribute('data-filter');
+                
+                // Show/hide gallery items based on filter
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Modal Image Handling
+        const galleryModal = document.getElementById('galleryModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('galleryModalLabel');
+        const modalDescription = document.getElementById('modalDescription');
+        
+        // When gallery modal is about to be shown
+        galleryModal.addEventListener('show.bs.modal', function(event) {
+            const link = event.relatedTarget;
+            const imageSrc = link.getAttribute('data-src');
+            const imageTitle = link.getAttribute('data-title');
+            const imageDesc = link.getAttribute('data-desc');
+            
+            modalImage.src = imageSrc;
+            modalTitle.textContent = imageTitle;
+            modalDescription.textContent = imageDesc;
+        });
+        
+        // Initialize with "All" filter active
+        document.querySelector('.filter-button[data-filter="all"]').click();
+    });
+</script>
+{% endblock %}
+
+{% endblock %}

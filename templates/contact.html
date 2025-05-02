@@ -1,0 +1,259 @@
+{% extends "layout.html" %}
+
+{% block title %}Contact Us - Zamindar College{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1920x1080/?university,campus');">
+    <div class="container">
+        <h1 class="animate-fade-in">Contact Us</h1>
+        <p class="animate-fade-in">We'd love to hear from you! Reach out to us with your questions or inquiries</p>
+    </div>
+</section>
+
+<!-- Contact Information Section -->
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center animate-fade-in">
+                <h2>Get in Touch</h2>
+                <p>Whether you have questions about admissions, academic programs, or any other aspect of Zamindar College, our team is here to help. Feel free to reach out to us through any of the following channels.</p>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-md-4 mb-4 animate-fade-in">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div class="rounded-circle bg-dark d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                            <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="card-title">Visit Us</h4>
+                        <p class="card-text">Zamindar College<br>Gujrat Road<br>Gujranwala, Punjab<br>Pakistan</p>
+                        <a href="https://maps.google.com/" target="_blank" class="btn btn-sm btn-primary">View on Map</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4 animate-fade-in">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div class="rounded-circle bg-dark d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                            <i class="fas fa-phone-alt fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="card-title">Call Us</h4>
+                        <p class="card-text">Main Office: +92-55-9200272<br>Admissions: +92-55-9200273<br>Academic Affairs: +92-55-9200274</p>
+                        <p class="small">Monday to Friday<br>8:00 AM - 4:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4 animate-fade-in">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div class="rounded-circle bg-dark d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                            <i class="fas fa-envelope fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="card-title">Email Us</h4>
+                        <p class="card-text">General Inquiries:<br>info@zamindarcollege.edu.pk<br><br>Admissions:<br>admissions@zamindarcollege.edu.pk</p>
+                        <p class="small">We respond within 24-48 hours</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="section bg-secondary">
+    <div class="container">
+        <h2 class="section-title animate-fade-in">Send Us a Message</h2>
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0 animate-fade-in">
+                <div class="contact-form">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Full Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email Address">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Your Phone Number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select class="form-select" id="subject">
+                                <option selected>Select a subject</option>
+                                <option value="Admissions">Admissions</option>
+                                <option value="Academic Programs">Academic Programs</option>
+                                <option value="Financial Aid">Financial Aid</option>
+                                <option value="Student Services">Student Services</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 animate-fade-in">
+                <div class="contact-info h-100">
+                    <h3 class="mb-4">Department Contacts</h3>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="me-3 text-primary">
+                            <i class="fas fa-user-graduate fa-2x"></i>
+                        </div>
+                        <div>
+                            <h5>Admissions Office</h5>
+                            <p>For inquiries about admission requirements, application process, and deadlines.</p>
+                            <p>Email: admissions@zamindarcollege.edu.pk<br>Phone: +92-55-9200273</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="me-3 text-primary">
+                            <i class="fas fa-book fa-2x"></i>
+                        </div>
+                        <div>
+                            <h5>Academic Affairs</h5>
+                            <p>For inquiries about academic programs, courses, and faculty.</p>
+                            <p>Email: academics@zamindarcollege.edu.pk<br>Phone: +92-55-9200274</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="me-3 text-primary">
+                            <i class="fas fa-hand-holding-usd fa-2x"></i>
+                        </div>
+                        <div>
+                            <h5>Financial Aid Office</h5>
+                            <p>For inquiries about scholarships, fee structure, and payment methods.</p>
+                            <p>Email: finaid@zamindarcollege.edu.pk<br>Phone: +92-55-9200278</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex">
+                        <div class="me-3 text-primary">
+                            <i class="fas fa-users fa-2x"></i>
+                        </div>
+                        <div>
+                            <h5>Student Affairs</h5>
+                            <p>For inquiries about student activities, housing, and campus life.</p>
+                            <p>Email: studentaffairs@zamindarcollege.edu.pk<br>Phone: +92-55-9200279</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title animate-fade-in">Find Us</h2>
+        <div class="row">
+            <div class="col-12 animate-fade-in">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <!-- Replace with actual map embed code -->
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3378.5664873546!2d74.19089!3d32.1611694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f29ab20000001%3A0x44584f6cca93615b!2sZamindar%20College%2C%20Gujranwala%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1647346276121!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section bg-secondary">
+    <div class="container">
+        <h2 class="section-title animate-fade-in">Frequently Asked Questions</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 animate-fade-in">
+                <div class="accordion" id="contactFaq">
+                    <div class="accordion-item bg-dark mb-3 border-0">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What are the visiting hours for campus tours?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#contactFaq">
+                            <div class="accordion-body">
+                                Campus tours are conducted Monday through Friday from 9:00 AM to 2:00 PM. It is recommended to schedule a tour in advance by contacting the Admissions Office at +92-55-9200273 or emailing admissions@zamindarcollege.edu.pk.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-dark mb-3 border-0">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button bg-dark text-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How can I request official transcripts?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#contactFaq">
+                            <div class="accordion-body">
+                                To request official transcripts, current and former students need to submit a written request to the Examination Office along with the required fee. The request should include your full name, enrollment number, program of study, years attended, and the purpose of the transcript request. Processing typically takes 5-7 working days.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-dark mb-3 border-0">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button bg-dark text-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                How do I apply for a position at Zamindar College?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#contactFaq">
+                            <div class="accordion-body">
+                                Job openings at Zamindar College are posted on our website under the "Careers" section. To apply, submit your resume, cover letter, and other required documents to careers@zamindarcollege.edu.pk or in person at the HR Office. Be sure to specify the position you are applying for in the subject line or on the envelope.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-dark mb-3 border-0">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button bg-dark text-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                How can I reserve college facilities for an event?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#contactFaq">
+                            <div class="accordion-body">
+                                To reserve college facilities such as the auditorium, sports fields, or meeting rooms, contact the Administration Office at admin@zamindarcollege.edu.pk or +92-55-9200277. Provide details about the event including the date, time, expected number of attendees, and specific facility requirements. Reservation requests should be made at least two weeks in advance.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Social Media Section -->
+<section class="section text-center">
+    <div class="container">
+        <h2 class="animate-fade-in">Connect With Us</h2>
+        <p class="animate-fade-in">Follow us on social media to stay updated about our latest news and events.</p>
+        
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-8 animate-fade-in">
+                <div class="social-icons">
+                    <a href="#" class="btn btn-dark btn-lg mx-2 mb-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="btn btn-dark btn-lg mx-2 mb-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="btn btn-dark btn-lg mx-2 mb-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="btn btn-dark btn-lg mx-2 mb-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="btn btn-dark btn-lg mx-2 mb-3"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
