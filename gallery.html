@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Zamindar College</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="attached_assets/OIP.jfif" alt="Zamindar College Logo" class="logo-img">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="academics.html">Academics</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="campus.html">Campus</a>
+            <a href="events.html">Events</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+        </div>
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner" data-aos="fade-down">
+        <div class="banner-content">
+            <h1>Photo Gallery</h1>
+            <p>Capturing moments and memories from Zamindar College</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filter Section -->
+    <section class="gallery-filters" data-aos="fade-up">
+        <h2 class="section-title">Our College Life</h2>
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="campus">Campus</button>
+            <button class="filter-btn" data-filter="events">Events</button>
+            <button class="filter-btn" data-filter="academic">Academic</button>
+            <button class="filter-btn" data-filter="sports">Sports</button>
+            <button class="filter-btn" data-filter="cultural">Cultural</button>
+        </div>
+    </section>
+
+    <!-- Gallery Grid Section -->
+    <section class="gallery-grid" data-aos="fade-up">
+        <div class="gallery-container">
+            <!-- College Images from our gallery -->
+            <div class="gallery-item" data-category="campus" data-aos="zoom-in">
+                <div class="gallery-image">
+                    <img src="images/gallery/college_image1.jpg" alt="Zamindar College Main Building" loading="lazy">
+                </div>
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>Main Building</h3>
+                        <p>The historic main building of Zamindar College, established in 1925.</p>
+                    </div>
+                    <div class="overlay-icons">
+                        <span class="view-full"><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="campus" data-aos="zoom-in">
+                <div class="gallery-image">
+                    <img src="images/gallery/college_image2.jpg" alt="Zamindar College Garden" loading="lazy">
+                </div>
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>College Garden</h3>
+                        <p>Beautiful and well-maintained gardens surrounding the campus.</p>
+                    </div>
+                    <div class="overlay-icons">
+                        <span class="view-full"><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="academic" data-aos="zoom-in">
+                <div class="gallery-image">
+                    <img src="images/gallery/college_image3.jpg" alt="Zamindar College Library" loading="lazy">
+                </div>
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>Central Library</h3>
+                        <p>Our well-stocked library with thousands of books and digital resources.</p>
+                    </div>
+                    <div class="overlay-icons">
+                        <span class="view-full"><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Events Images -->
+            <div class="gallery-item" data-category="events" data-aos="zoom-in">
+                <div class="gallery-image">
+                    <img src="images/gallery/college_image4.jpg" alt="Zamindar College Convocation" loading="lazy">
+                </div>
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>Convocation Ceremony 2023</h3>
+                        <p>Annual graduation ceremony celebrating student achievements.</p>
+                    </div>
+                    <div class="overlay-icons">
+                        <span class="view-full"><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="cultural" data-aos="zoom-in">
+                <div class="gallery-image">
+                    <img src="images/gallery/college_image5.jpg" alt="College Cultural Events" loading="lazy">
+                </div>
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>Cultural Celebrations</h3>
+                        <p>Students participating in cultural activities and celebrations.</p>
+                    </div>
+                    <div class="overlay-icons">
+                        <span class="view-full"><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Images -->
+            <div class="gallery-item" data-category="academic" data-aos="zoom-in">
+                <div class="gallery-image-placeholder">
+                    <i class="fas fa-microscope"></i>
+                    <span>Science Lab</span>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>Physics Laboratory</h3>
+                        <p>Students conducting experiments in our well-equipped physics lab.</p>
+                    </div>
+                    <div class="overlay-icons">
+                        <span class="view-full"><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="academic" data-aos="zoom-in">
+                <div class="gallery-image-placeholder">
+                    <i class="fas fa-laptop"></i>
+                    <span>Computer Lab</span>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>Computer Science Lab</h3>
+                        <p>Modern computer facilities for practical learning and research.</p>
+                    </div>
+                    <div class="overlay-icons">
+                        <span class="view-full"><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="academic" data-aos="zoom-in">
+                <div class="gallery-image-placeholder">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Classroom</span>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>Modern Classroom</h3>
+                        <p>Spacious classrooms equipped with modern teaching aids.</p>
+                    </div>
+                    <div class="overlay-icons">
+                        <span class="view-full"><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sports Images -->
+            <div class="gallery-item" data-category="sports" data-aos="zoom-in">
+                <div class="gallery-image-placeholder">
+                    <i class="fas fa-cricket-ball"></i>
+                    <span>Cricket Match</span>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>Annual Cricket Tournament</h3>
+                        <p>Inter-departmental cricket match during Sports Gala 2023.</p>
+                    </div>
+                    <div class="overlay-icons">
+                        <span class="view-full"><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="sports" data-aos="zoom-in">
+                <div class="gallery-image-placeholder">
+                    <i class="fas fa-running"></i>
+                    <span>Athletics</span>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>Athletics Competition</h3>
+                        <p>Students participating in the annual athletics championship.</p>
+                    </div>
+                    <div class="overlay-icons">
+                        <span class="view-full"><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cultural Images -->
+            <div class="gallery-item" data-category="cultural" data-aos="zoom-in">
+                <div class="gallery-image-placeholder">
+                    <i class="fas fa-theater-masks"></i>
+                    <span>Drama Performance</span>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>Annual Drama Festival</h3>
+                        <p>Students showcasing their theatrical talents at the cultural event.</p>
+                    </div>
+                    <div class="overlay-icons">
+                        <span class="view-full"><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="cultural" data-aos="zoom-in">
+                <div class="gallery-image-placeholder">
+                    <i class="fas fa-music"></i>
+                    <span>Music Concert</span>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>Music Concert 2023</h3>
+                        <p>College music society performing at the annual cultural night.</p>
+                    </div>
+                    <div class="overlay-icons">
+                        <span class="view-full"><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="events" data-aos="zoom-in">
+                <div class="gallery-image-placeholder">
+                    <i class="fas fa-handshake"></i>
+                    <span>Welcome Day</span>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>Freshman Welcome Day</h3>
+                        <p>Orientation ceremony for the new batch of students.</p>
+                    </div>
+                    <div class="overlay-icons">
+                        <span class="view-full"><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="campus" data-aos="zoom-in">
+                <div class="gallery-image-placeholder">
+                    <i class="fas fa-utensils"></i>
+                    <span>Cafeteria</span>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>College Cafeteria</h3>
+                        <p>Modern cafeteria where students gather for meals and discussions.</p>
+                    </div>
+                    <div class="overlay-icons">
+                        <span class="view-full"><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="cultural" data-aos="zoom-in">
+                <div class="gallery-image-placeholder">
+                    <i class="fas fa-palette"></i>
+                    <span>Art Exhibition</span>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>Student Art Exhibition</h3>
+                        <p>Showcasing creative artworks by talented students of Zamindar College.</p>
+                    </div>
+                    <div class="overlay-icons">
+                        <span class="view-full"><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="events" data-aos="zoom-in">
+                <div class="gallery-image-placeholder">
+                    <i class="fas fa-award"></i>
+                    <span>Prize Distribution</span>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>Annual Prize Distribution</h3>
+                        <p>Celebrating achievements of students in academics and extracurricular activities.</p>
+                    </div>
+                    <div class="overlay-icons">
+                        <span class="view-full"><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section class="video-gallery" data-aos="fade-up">
+        <h2 class="section-title">Video Gallery</h2>
+        <div class="video-container">
+            <div class="video-item" data-aos="zoom-in">
+                <div class="video-content">
+                    <video controls poster="images/gallery/college_image1.jpg">
+                        <source src="Beauty Of The ZaminDar COllege GuJrat _ ZaminDar COllege GuJrat__ #zamindarcollegegujrat #gujrat.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3>College Drone View</h3>
+                    <p>Aerial view showcasing the beauty of Zamindar College Gujrat</p>
+                </div>
+            </div>
+
+            <div class="video-item" data-aos="zoom-in" data-aos-delay="100">
+                <div class="video-placeholder">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Convocation Highlights</span>
+                </div>
+                <div class="video-info">
+                    <h3>Convocation Ceremony 2023</h3>
+                    <p>Highlights from this year's graduation ceremony</p>
+                </div>
+            </div>
+
+            <div class="video-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="video-placeholder">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Cultural Performances</span>
+                </div>
+                <div class="video-info">
+                    <h3>Annual Cultural Festival</h3>
+                    <p>Student performances at the cultural night</p>
+                </div>
+            </div>
+
+            <div class="video-item" data-aos="zoom-in" data-aos-delay="300">
+                <div class="video-placeholder">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Sports Day</span>
+                </div>
+                <div class="video-info">
+                    <h3>Annual Sports Gala</h3>
+                    <p>Exciting moments from sports competitions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Submission Section -->
+    <section class="photo-submission" data-aos="fade-up">
+        <h2 class="section-title">Share Your Memories</h2>
+        <div class="submission-container" data-aos="zoom-in">
+            <div class="submission-content">
+                <p>Are you a student, alumni, or faculty member with photos of Zamindar College events or campus life? Share them with us to be featured in our gallery!</p>
+                <div class="submission-steps">
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="step-info">
+                            <h3>Step 1</h3>
+                            <p>Select your best photos related to Zamindar College</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-file-upload"></i>
+                        </div>
+                        <div class="step-info">
+                            <h3>Step 2</h3>
+                            <p>Fill out our simple submission form with details</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="step-info">
+                            <h3>Step 3</h3>
+                            <p>Wait for approval and see your photos in our gallery</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="open-submission-form" class="btn">Submit Your Photos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Submission Modal -->
+    <div class="photo-submission-modal" id="photo-submission-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 class="modal-title">Submit Your Photos</h2>
+            <form id="photo-submission-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="submitter-name">Your Name <span class="required">*</span></label>
+                    <input type="text" id="submitter-name" name="submitter-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="submitter-email">Your Email <span class="required">*</span></label>
+                    <input type="email" id="submitter-email" name="submitter-email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="submitter-role">Your Role <span class="required">*</span></label>
+                    <select id="submitter-role" name="submitter-role" required>
+                        <option value="">-- Select your role --</option>
+                        <option value="student">Current Student</option>
+                        <option value="alumni">Alumni</option>
+                        <option value="faculty">Faculty Member</option>
+                        <option value="staff">Staff Member</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo-title">Photo Title <span class="required">*</span></label>
+                    <input type="text" id="photo-title" name="photo-title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo-description">Description <span class="required">*</span></label>
+                    <textarea id="photo-description" name="photo-description" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo-category">Category <span class="required">*</span></label>
+                    <select id="photo-category" name="photo-category" required>
+                        <option value="">-- Select category --</option>
+                        <option value="campus">Campus</option>
+                        <option value="events">Events</option>
+                        <option value="academic">Academic</option>
+                        <option value="sports">Sports</option>
+                        <option value="cultural">Cultural</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo-date">Date Taken</label>
+                    <input type="date" id="photo-date" name="photo-date">
+                </div>
+
+                <div class="form-group">
+                    <label for="photo-file">Upload Photo <span class="required">*</span></label>
+                    <div class="file-upload-container">
+                        <div class="file-upload-box" id="file-upload-box">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Drag & drop your photo here or click to browse</p>
+                            <p class="file-restrictions">Accepted formats: .jpg, .jpeg, .png (Max size: 5MB)</p>
+                        </div>
+                        <input type="file" id="photo-file" name="photo-file" accept=".jpg,.jpeg,.png" required>
+                        <div class="selected-file-preview" id="selected-file-preview"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="photo-permission" name="photo-permission" required>
+                        <span class="checkmark"></span>
+                        I confirm that I own this photo or have permission to share it, and I grant Zamindar College permission to use it on their website.
+                    </label>
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit" class="btn submit-btn">Submit Photo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gallery Lightbox -->
+    <div class="lightbox" id="gallery-lightbox">
+        <div class="lightbox-content">
+            <span class="close-lightbox">&times;</span>
+            <div class="lightbox-image-container">
+                <div class="lightbox-placeholder">
+                    <i class="fas fa-image"></i>
+                </div>
+            </div>
+            <div class="lightbox-caption"></div>
+            <div class="lightbox-nav">
+                <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Gujrat Road, Gujranwala, Punjab, Pakistan</p>
+                <p><i class="fas fa-phone"></i> +92-55-9200220</p>
+                <p><i class="fas fa-envelope"></i> info@zamindarcollege.edu.pk</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Zamindar College. All Rights Reserved.</p>
+            <p class="watermark">Made by Moeed Mirza</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

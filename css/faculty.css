@@ -1,0 +1,995 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --main-color: #4e008e;
+    --secondary-color: #9a35d1;
+    --black: #13131a;
+    --bg: #f5f5f5;
+    --border: .1rem solid rgba(255, 255, 255, .3);
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; 
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--bg);
+}
+
+section {
+    padding: 3rem 9%;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--main-color);
+    font-size: 3rem;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    height: .3rem;
+    background: var(--secondary-color);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 2.5rem;
+    border-radius: 5rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-transform: capitalize;
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+    letter-spacing: .1rem;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+}
+
+header .logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo .logo-img {
+    height: 6rem;
+    width: auto;
+    object-fit: contain;
+}
+
+header .navbar a {
+    font-size: 1.6rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+
+header .navbar a:hover,
+header .navbar a.active {
+    color: var(--main-color);
+}
+
+header .icons i {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+header .icons i:hover {
+    color: var(--main-color);
+}
+
+#menu-bars {
+    display: none;
+}
+
+.search-form {
+    position: absolute;
+    top: 110%; 
+    right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    transition: .4s linear;
+}
+
+.search-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+.search-form label {
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.search-form label:hover {
+    color: var(--main-color);
+}
+
+/* Banner Styles */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://zamindarcollege.edu.pk/wp-content/uploads/2022/08/5-1536x1024.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 9rem;
+}
+
+.banner-content {
+    color: #fff;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.banner-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+.banner-content p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Principal Section */
+.principal-section {
+    padding: 5rem 9%;
+    background: #f9f9f9;
+}
+
+.principal-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.principal-card {
+    flex: 0 0 calc(50% - 3rem);
+    max-width: 40rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    padding: 2rem;
+}
+
+.principal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
+}
+
+.principal-img {
+    background: var(--secondary-color);
+}
+
+.principal-img i {
+    font-size: 5rem;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .principal-card {
+        flex: 0 0 100%;
+    }
+}
+
+/* Notice Board Section */
+.notice-board-section {
+    padding: 5rem 9%;
+    background: var(--bg);
+}
+
+.notice-board-container {
+    display: flex;
+    justify-content: center;
+}
+
+.notice-board {
+    width: 100%;
+    max-width: 100rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    /* Cork board texture */
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+        url('https://www.transparenttextures.com/patterns/cork-board.png');
+    border: 1.5rem solid #8B4513;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3), inset 0 0 2rem rgba(0, 0, 0, 0.1);
+}
+
+.board-header {
+    background: var(--main-color);
+    color: #fff;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #8B4513;
+}
+
+.board-header h3 {
+    font-size: 2.2rem;
+}
+
+.last-updated {
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+.notices {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.notice {
+    background: #fffd89;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+    /* Paper texture with rotation */
+    background-image: 
+        linear-gradient(rgba(255, 253, 137, 0.9), rgba(255, 253, 137, 0.9)),
+        url('https://www.transparenttextures.com/patterns/paper.png');
+    transform: rotate(-1deg);
+    box-shadow: 0.3rem 0.3rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+.notice:nth-child(even) {
+    transform: rotate(1deg);
+    background: #b5f2ff;
+    background-image: 
+        linear-gradient(rgba(181, 242, 255, 0.9), rgba(181, 242, 255, 0.9)),
+        url('https://www.transparenttextures.com/patterns/paper.png');
+}
+
+.notice:nth-child(3n) {
+    transform: rotate(-0.5deg);
+    background: #ffd1dc;
+    background-image: 
+        linear-gradient(rgba(255, 209, 220, 0.9), rgba(255, 209, 220, 0.9)),
+        url('https://www.transparenttextures.com/patterns/paper.png');
+}
+
+.notice:hover {
+    transform: scale(1.03) rotate(0);
+    z-index: 10;
+    box-shadow: 0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
+}
+
+.notice-pin {
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    color: #cc0000;
+    z-index: 1;
+}
+
+.notice-content {
+    padding-top: 1.5rem;
+}
+
+.notice h4 {
+    font-size: 1.8rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.notice-date {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 1.2rem;
+    font-style: italic;
+}
+
+.notice p {
+    font-size: 1.5rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.notice a {
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.notice a:hover {
+    text-decoration: underline;
+}
+
+.notice.urgent {
+    background: #fff4e5;
+    border-left: 0.5rem solid #ff9800;
+    background-image: 
+        linear-gradient(rgba(255, 244, 229, 0.9), rgba(255, 244, 229, 0.9)),
+        url('https://www.transparenttextures.com/patterns/paper.png');
+}
+
+.notice.urgent h4 {
+    color: #cc6600;
+}
+
+.notice-board-footer {
+    padding: 1.5rem 3rem;
+    text-align: right;
+    border-top: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.view-all-btn {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+    color: var(--secondary-color);
+    gap: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .notices {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Faculty Filters Section */
+.faculty-filters {
+    background: #fff;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.filter-label {
+    font-size: 1.8rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    background: #f9f9f9;
+    color: var(--black);
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--main-color);
+    color: #fff;
+}
+
+/* Faculty Members Section */
+.faculty-members {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    background: #fff;
+}
+
+.faculty-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.faculty-card {
+    flex: 1 1 45rem;
+    display: flex;
+    background: #f9f9f9;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faculty-card:hover {
+    transform: translateY(-10px);
+}
+
+.faculty-img {
+    flex: 0 0 15rem;
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faculty-img i {
+    font-size: 7rem;
+    color: #fff;
+}
+
+.faculty-info {
+    flex: 1;
+    padding: 2rem;
+}
+
+.faculty-info h3 {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.faculty-info .designation {
+    font-size: 1.7rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.faculty-info .qualification,
+.faculty-info .experience {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.faculty-contact {
+    margin: 1.5rem 0;
+}
+
+.faculty-contact p {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: .5rem;
+}
+
+.faculty-contact p i {
+    color: var(--main-color);
+    margin-right: .5rem;
+}
+
+.faculty-socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.faculty-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.faculty-socials a:hover {
+    background: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+/* Department Information Section */
+.department-info {
+    background: #f9f9f9;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.departments-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.department-card {
+    flex: 1 1 30rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.department-card:hover {
+    transform: translateY(-10px);
+}
+
+.department-icon {
+    margin-bottom: 2rem;
+}
+
+.department-icon i {
+    font-size: 5rem;
+    color: var(--main-color);
+}
+
+.department-card h3 {
+    font-size: 2.2rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.department-card p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.department-highlights {
+    list-style-type: none;
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.department-highlights li {
+    font-size: 1.5rem;
+    color: #666;
+    margin: 1rem 0;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.department-highlights li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+/* Faculty Achievements Section */
+.faculty-achievements {
+    background: #fff;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.achievements-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.achievement-card {
+    flex: 1 1 30rem;
+    background: #f9f9f9;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: scale(1.05);
+    background: var(--main-color);
+}
+
+.achievement-card:hover h3,
+.achievement-card:hover p,
+.achievement-card:hover .achievement-icon i {
+    color: #fff;
+}
+
+.achievement-icon {
+    margin-bottom: 2rem;
+}
+
+.achievement-icon i {
+    font-size: 5rem;
+    color: var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.achievement-card h3 {
+    font-size: 2.2rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.achievement-card p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+/* Join Faculty Section */
+.join-faculty {
+    background: #f9f9f9;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.join-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+}
+
+.join-info {
+    flex: 1 1 40rem;
+}
+
+.join-info h3 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.join-info ul {
+    list-style-type: none;
+    margin-bottom: 2rem;
+}
+
+.join-info ul li {
+    font-size: 1.6rem;
+    color: #666;
+    margin: 1rem 0;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.join-info ul li::before {
+    content: '\f0da';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.join-info p {
+    font-size: 1.6rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.join-image {
+    flex: 1 1 40rem;
+}
+
+.image-placeholder {
+    background: var(--main-color);
+    height: 30rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.image-placeholder i {
+    font-size: 8rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.image-placeholder p {
+    font-size: 2rem;
+    color: #fff;
+    max-width: 30rem;
+}
+
+/* Footer Styles */
+footer {
+    background: #222;
+    padding-top: 3rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0 9%;
+}
+
+.footer-section {
+    flex: 1 1 25rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 6rem;
+    height: .2rem;
+    background: var(--secondary-color);
+}
+
+.footer-section p,
+.footer-section ul li {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin: 1rem 0;
+}
+
+.footer-section p i {
+    color: var(--secondary-color);
+    margin-right: .5rem;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--secondary-color);
+    padding-left: .5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    background: #111;
+    padding: 2rem 9%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-bottom p {
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+.footer-bottom .watermark {
+    font-size: 1.4rem;
+    color: #999;
+    margin-top: 0.5rem;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-bars {
+        display: inline-block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        border-bottom: .1rem solid rgba(0, 0, 0, .2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .5s linear;
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #f7f7f7;
+        border-radius: .5rem;
+    }
+
+    .search-form {
+        width: 90%;
+    }
+
+    .banner-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .banner-content p {
+        font-size: 1.6rem;
+    }
+
+    .faculty-card {
+        flex-direction: column;
+    }
+
+    .faculty-img {
+        height: 15rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}

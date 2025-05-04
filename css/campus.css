@@ -1,0 +1,1032 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --main-color: #4e008e;
+    --secondary-color: #9a35d1;
+    --black: #13131a;
+    --bg: #f5f5f5;
+    --border: .1rem solid rgba(255, 255, 255, .3);
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; 
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--bg);
+}
+
+section {
+    padding: 3rem 9%;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--main-color);
+    font-size: 3rem;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    height: .3rem;
+    background: var(--secondary-color);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 2.5rem;
+    border-radius: 5rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-transform: capitalize;
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+    letter-spacing: .1rem;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+}
+
+header .logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo .logo-img {
+    height: 6rem;
+    width: auto;
+    object-fit: contain;
+}
+
+header .navbar a {
+    font-size: 1.6rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+
+header .navbar a:hover,
+header .navbar a.active {
+    color: var(--main-color);
+}
+
+header .icons i {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+header .icons i:hover {
+    color: var(--main-color);
+}
+
+#menu-bars {
+    display: none;
+}
+
+.search-form {
+    position: absolute;
+    top: 110%; 
+    right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    transition: .4s linear;
+}
+
+.search-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+.search-form label {
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.search-form label:hover {
+    color: var(--main-color);
+}
+
+/* Banner Styles */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://zamindarcollege.edu.pk/wp-content/uploads/2022/08/1-1536x1024.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 9rem;
+}
+
+.banner-content {
+    color: #fff;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.banner-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+.banner-content p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Campus Tour Section */
+.campus-tour {
+    background: #fff;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.tour-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.tour-map {
+    flex: 1 1 55rem;
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    height: 40rem;
+}
+
+.map-placeholder {
+    background: var(--main-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+.map-placeholder i {
+    font-size: 8rem;
+    margin-bottom: 2rem;
+}
+
+.map-placeholder p {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.map-placeholder span {
+    font-size: 1.6rem;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.map-hotspot {
+    position: absolute;
+    background: var(--secondary-color);
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.map-hotspot i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.map-hotspot span {
+    position: absolute;
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: var(--black);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+}
+
+.map-hotspot:hover {
+    transform: scale(1.1);
+}
+
+.map-hotspot:hover span {
+    visibility: visible;
+    opacity: 1;
+    bottom: -4rem;
+}
+
+.tour-info {
+    flex: 1 1 35rem;
+}
+
+.building-info {
+    background: #f9f9f9;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.building-info.active {
+    opacity: 1;
+    height: auto;
+}
+
+.building-info h3 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.building-info h3 i {
+    margin-right: 1rem;
+    color: var(--secondary-color);
+}
+
+.building-info p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Facilities Section */
+.facilities {
+    background: #f9f9f9;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.facilities-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.facility-card {
+    flex: 1 1 25rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-10px);
+}
+
+.facility-icon {
+    margin-bottom: 2rem;
+}
+
+.facility-icon i {
+    font-size: 5rem;
+    color: var(--main-color);
+}
+
+.facility-card h3 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.facility-card p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Student Life Section */
+.student-life {
+    background: #fff;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.student-life-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+}
+
+.student-life-image {
+    flex: 1 1 40rem;
+}
+
+.image-placeholder {
+    background: var(--main-color);
+    height: 30rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+.image-placeholder i {
+    font-size: 8rem;
+    margin-bottom: 2rem;
+}
+
+.image-placeholder p {
+    font-size: 2rem;
+}
+
+.student-life-content {
+    flex: 1 1 40rem;
+}
+
+.student-life-content h3 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.student-life-content p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.student-testimonial {
+    background: #f9f9f9;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 2.5rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+}
+
+.student-testimonial::before {
+    content: '\f10d';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: -1.5rem;
+    left: 2rem;
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+
+.student-testimonial p {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.student-testimonial span {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    font-weight: 600;
+    display: block;
+    text-align: right;
+}
+
+/* Clubs and Societies Section */
+.clubs-societies {
+    background: #f9f9f9;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.clubs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.club-card {
+    flex: 1 1 30rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.club-card:hover {
+    transform: translateY(-10px);
+}
+
+.club-icon {
+    margin-bottom: 2rem;
+}
+
+.club-icon i {
+    font-size: 5rem;
+    color: var(--main-color);
+}
+
+.club-card h3 {
+    font-size: 2.2rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.club-card p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.clubs-more {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.clubs-more p {
+    font-size: 1.6rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Hostel Life Section */
+.hostel-life {
+    background: #fff;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.hostel-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hostel-content {
+    flex: 1 1 40rem;
+}
+
+.hostel-content h3 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.hostel-content p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.hostel-content h4 {
+    font-size: 1.8rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.hostel-content ul {
+    list-style-type: none;
+    margin-bottom: 2rem;
+}
+
+.hostel-content ul li {
+    font-size: 1.6rem;
+    color: #666;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.hostel-content ul li i {
+    margin-right: 1rem;
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+}
+
+.hostel-gallery {
+    flex: 1 1 40rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.hostel-image-placeholder {
+    background: var(--main-color);
+    height: 15rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.hostel-image-placeholder:hover {
+    transform: scale(1.05);
+    background: var(--secondary-color);
+}
+
+.hostel-image-placeholder i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hostel-image-placeholder p {
+    font-size: 1.4rem;
+}
+
+/* Sports and Recreation Section */
+.sports-recreation {
+    background: #f9f9f9;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.sports-intro {
+    max-width: 90rem;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.sports-intro p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.sports-facilities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.sports-card {
+    flex: 1 1 25rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.sports-card:hover {
+    transform: translateY(-10px);
+}
+
+.sports-icon {
+    margin-bottom: 2rem;
+}
+
+.sports-icon i {
+    font-size: 5rem;
+    color: var(--main-color);
+}
+
+.sports-card h3 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.sports-card p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Campus Safety Section */
+.campus-safety {
+    background: #fff;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.safety-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.safety-icon {
+    flex: 0 0 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.safety-icon i {
+    font-size: 10rem;
+    color: var(--main-color);
+}
+
+.safety-content {
+    flex: 1;
+}
+
+.safety-content h3 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.safety-content p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.safety-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.safety-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+}
+
+.safety-feature:hover {
+    transform: translateY(-5px);
+}
+
+.safety-feature i {
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.safety-feature h4 {
+    font-size: 1.8rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.safety-feature p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.emergency-contacts {
+    background: #f9f9f9;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.emergency-contacts h4 {
+    font-size: 1.8rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.emergency-contacts p {
+    font-size: 1.5rem;
+    color: #666;
+    margin: .8rem 0;
+}
+
+.emergency-contacts p i {
+    color: var(--main-color);
+    margin-right: .5rem;
+}
+
+/* Footer Styles */
+footer {
+    background: #222;
+    padding-top: 3rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0 9%;
+}
+
+.footer-section {
+    flex: 1 1 25rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 6rem;
+    height: .2rem;
+    background: var(--secondary-color);
+}
+
+.footer-section p,
+.footer-section ul li {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin: 1rem 0;
+}
+
+.footer-section p i {
+    color: var(--secondary-color);
+    margin-right: .5rem;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--secondary-color);
+    padding-left: .5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    background: #111;
+    padding: 2rem 9%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-bottom p {
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+.footer-bottom .watermark {
+    font-size: 1.4rem;
+    color: #999;
+    margin-top: 0.5rem;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-bars {
+        display: inline-block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        border-bottom: .1rem solid rgba(0, 0, 0, .2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .5s linear;
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #f7f7f7;
+        border-radius: .5rem;
+    }
+
+    .search-form {
+        width: 90%;
+    }
+
+    .banner-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .banner-content p {
+        font-size: 1.6rem;
+    }
+
+    .tour-container,
+    .student-life-container,
+    .hostel-container,
+    .safety-container {
+        flex-direction: column;
+    }
+
+    .hostel-gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .safety-features {
+        grid-template-columns: 1fr;
+    }
+}

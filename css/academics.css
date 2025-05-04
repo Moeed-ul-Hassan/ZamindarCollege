@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --primary-bg: #ffffff;
+    --secondary-bg: #f3f4ff;
+    --tertiary-bg: #e8eaff;
+    --card-bg: #ffffff;
+    --primary-text: #1a1a2e;
+    --secondary-text: #444868;
+    --accent-color: #FF5678; /* Vibrant pink accent */
+    --accent-color-light: #FF7D94;
+    --accent-color-dark: #E33B5C;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; 
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--primary-bg);
+}
+
+section {
+    padding: 3rem 9%;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary-text);
+    font-size: 3rem;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    height: .3rem;
+    background: var(--accent-color);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 2.5rem;
+    border-radius: 5rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--accent-color);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-transform: capitalize;
+}
+
+.btn:hover {
+    background: var(--accent-color-light);
+    letter-spacing: .1rem;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+}
+
+header .logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo .logo-img {
+    height: 6rem;
+    width: auto;
+    object-fit: contain;
+}
+
+header .navbar a {
+    font-size: 1.6rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+
+header .navbar a:hover,
+header .navbar a.active {
+    color: var(--accent-color);
+}
+
+header .icons i {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+header .icons i:hover {
+    color: var(--accent-color);
+}
+
+#menu-bars {
+    display: none;
+}
+
+.search-form {
+    position: absolute;
+    top: 110%; 
+    right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    transition: .4s linear;
+}
+
+.search-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+.search-form label {
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.search-form label:hover {
+    color: var(--main-color);
+}
+
+/* Banner Styles */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://zamindarcollege.edu.pk/wp-content/uploads/2022/08/4-1536x1024.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 9rem;
+}
+
+.banner-content {
+    color: #fff;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.banner-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+.banner-content p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Programs Section */
+.programs {
+    background: #fff;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.programs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.program-card {
+    flex: 1 1 30rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+}
+
+.program-icon {
+    margin-bottom: 2rem;
+}
+
+.program-icon i {
+    font-size: 5rem;
+    color: var(--main-color);
+}
+
+.program-card h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.program-card ul {
+    list-style-type: none;
+    margin-bottom: 2rem;
+}
+
+.program-card ul li {
+    font-size: 1.6rem;
+    color: #666;
+    margin: 1rem 0;
+}
+
+/* Academic Calendar Section */
+.calendar {
+    background: #f9f9f9;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.calendar-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.calendar-card {
+    flex: 1 1 40rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 3rem;
+    transition: all 0.3s ease;
+}
+
+.calendar-card:hover {
+    transform: scale(1.02);
+}
+
+.calendar-card h3 {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.calendar-details p {
+    font-size: 1.6rem;
+    color: #666;
+    margin: 1rem 0;
+}
+
+.calendar-details p strong {
+    color: var(--black);
+    font-weight: 600;
+}
+
+/* Academic Resources Section */
+/* Fee Structure Section */
+.fee-structure {
+    background: var(--tertiary-bg);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.fee-chart-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 2rem 0;
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+}
+
+.fee-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--card-bg);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.fee-table th {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+    padding: 1.5rem 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+}
+
+.fee-table td {
+    padding: 1.2rem 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.fee-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.fee-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.fee-table td:last-child {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    text-align: right;
+    direction: rtl;
+    text-transform: none;
+    font-size: 1.6rem;
+}
+
+.fee-note {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: var(--secondary-text);
+    text-align: center;
+}
+
+.fee-note i {
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+}
+
+.resources {
+    background: #fff;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.resources-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.resource-card {
+    flex: 1 1 30rem;
+    background: #f9f9f9;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.resource-card:hover {
+    background: var(--main-color);
+}
+
+.resource-card:hover h3,
+.resource-card:hover p,
+.resource-card:hover .resource-icon i {
+    color: #fff;
+}
+
+.resource-icon {
+    margin-bottom: 1.5rem;
+}
+
+.resource-icon i {
+    font-size: 4rem;
+    color: var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.resource-card h3 {
+    font-size: 2.2rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.resource-card p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+/* Footer Styles */
+footer {
+    background: #222;
+    padding-top: 3rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0 9%;
+}
+
+.footer-section {
+    flex: 1 1 25rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 6rem;
+    height: .2rem;
+    background: var(--secondary-color);
+}
+
+.footer-section p,
+.footer-section ul li {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin: 1rem 0;
+}
+
+.footer-section p i {
+    color: var(--secondary-color);
+    margin-right: .5rem;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--secondary-color);
+    padding-left: .5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    background: #111;
+    padding: 2rem 9%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-bottom p {
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+.footer-bottom .watermark {
+    font-size: 1.4rem;
+    color: #999;
+    margin-top: 0.5rem;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-bars {
+        display: inline-block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        border-bottom: .1rem solid rgba(0, 0, 0, .2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .5s linear;
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #f7f7f7;
+        border-radius: .5rem;
+    }
+
+    .search-form {
+        width: 90%;
+    }
+
+    .banner-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .banner-content p {
+        font-size: 1.6rem;
+    }
+
+    .program-card,
+    .calendar-card,
+    .resource-card {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}

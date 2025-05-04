@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback - Zamindar College</title>
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/feedback.css">
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="OIP.jfif" alt="Zamindar College Logo" class="logo-img">
+                <span>Zamindar College</span>
+            </a>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="academics.html">Academics</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="campus.html">Campus</a>
+            <a href="events.html">Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="feedback.html" class="active">Feedback</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+        </div>
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner" data-aos="fade-down">
+        <div class="banner-content">
+            <h1>Student Feedback</h1>
+            <p>Your opinions help us improve your educational experience</p>
+        </div>
+    </section>
+
+    <!-- Feedback Form Section -->
+    <section class="feedback-section" data-aos="fade-up">
+        <h2 class="section-title">Share Your Thoughts</h2>
+        
+        <div class="form-container">
+            <div class="feedback-intro" data-aos="fade-up">
+                <p>We value your feedback! Please take a moment to rate your experience and share your thoughts about Zamindar College. Your feedback helps us improve our programs and services.</p>
+            </div>
+            
+            <form id="feedback-form" class="feedback-form" data-aos="fade-up">
+                <!-- Student Information -->
+                <div class="form-group">
+                    <h3 class="form-subtitle">Your Information</h3>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name">
+                            <small class="error-message"></small>
+                        </div>
+                        <div class="input-group">
+                            <label for="roll-number">Roll Number</label>
+                            <input type="text" id="roll-number" name="roll-number" placeholder="Your Roll Number">
+                            <small class="error-message"></small>
+                        </div>
+                    </div>
+                    
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="program">Program</label>
+                            <select id="program" name="program">
+                                <option value="">Select Your Program</option>
+                                <option value="intermediate-science">Intermediate (Science)</option>
+                                <option value="intermediate-arts">Intermediate (Arts)</option>
+                                <option value="bs-computer-science">BS Computer Science</option>
+                                <option value="bs-mathematics">BS Mathematics</option>
+                                <option value="bs-physics">BS Physics</option>
+                                <option value="bs-chemistry">BS Chemistry</option>
+                                <option value="bs-english">BS English</option>
+                                <option value="bs-economics">BS Economics</option>
+                            </select>
+                            <small class="error-message"></small>
+                        </div>
+                        <div class="input-group">
+                            <label for="semester">Semester/Year</label>
+                            <select id="semester" name="semester">
+                                <option value="">Select Semester/Year</option>
+                                <option value="1st-year">1st Year</option>
+                                <option value="2nd-year">2nd Year</option>
+                                <option value="semester-1">1st Semester</option>
+                                <option value="semester-2">2nd Semester</option>
+                                <option value="semester-3">3rd Semester</option>
+                                <option value="semester-4">4th Semester</option>
+                                <option value="semester-5">5th Semester</option>
+                                <option value="semester-6">6th Semester</option>
+                                <option value="semester-7">7th Semester</option>
+                                <option value="semester-8">8th Semester</option>
+                            </select>
+                            <small class="error-message"></small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Emoji Rating Section -->
+                <div class="form-group">
+                    <h3 class="form-subtitle">Rate Your Experience</h3>
+                    <p class="rating-instructions">Click on an emoji to rate each aspect of your experience:</p>
+                    
+                    <div class="rating-container">
+                        <div class="rating-item" data-aos="zoom-in">
+                            <label>Teaching Quality</label>
+                            <div class="emoji-rating" id="teaching-rating">
+                                <div class="emoji-option" data-value="1">
+                                    <span class="emoji">😡</span>
+                                    <span class="emoji-label">Poor</span>
+                                </div>
+                                <div class="emoji-option" data-value="2">
+                                    <span class="emoji">😕</span>
+                                    <span class="emoji-label">Fair</span>
+                                </div>
+                                <div class="emoji-option" data-value="3">
+                                    <span class="emoji">😐</span>
+                                    <span class="emoji-label">Okay</span>
+                                </div>
+                                <div class="emoji-option" data-value="4">
+                                    <span class="emoji">🙂</span>
+                                    <span class="emoji-label">Good</span>
+                                </div>
+                                <div class="emoji-option" data-value="5">
+                                    <span class="emoji">😍</span>
+                                    <span class="emoji-label">Excellent</span>
+                                </div>
+                            </div>
+                            <input type="hidden" name="teaching-rating" id="teaching-rating-value">
+                            <small class="error-message"></small>
+                        </div>
+                        
+                        <div class="rating-item" data-aos="zoom-in" data-aos-delay="100">
+                            <label>Course Content</label>
+                            <div class="emoji-rating" id="course-rating">
+                                <div class="emoji-option" data-value="1">
+                                    <span class="emoji">😡</span>
+                                    <span class="emoji-label">Poor</span>
+                                </div>
+                                <div class="emoji-option" data-value="2">
+                                    <span class="emoji">😕</span>
+                                    <span class="emoji-label">Fair</span>
+                                </div>
+                                <div class="emoji-option" data-value="3">
+                                    <span class="emoji">😐</span>
+                                    <span class="emoji-label">Okay</span>
+                                </div>
+                                <div class="emoji-option" data-value="4">
+                                    <span class="emoji">🙂</span>
+                                    <span class="emoji-label">Good</span>
+                                </div>
+                                <div class="emoji-option" data-value="5">
+                                    <span class="emoji">😍</span>
+                                    <span class="emoji-label">Excellent</span>
+                                </div>
+                            </div>
+                            <input type="hidden" name="course-rating" id="course-rating-value">
+                            <small class="error-message"></small>
+                        </div>
+                        
+                        <div class="rating-item" data-aos="zoom-in" data-aos-delay="200">
+                            <label>Campus Facilities</label>
+                            <div class="emoji-rating" id="facilities-rating">
+                                <div class="emoji-option" data-value="1">
+                                    <span class="emoji">😡</span>
+                                    <span class="emoji-label">Poor</span>
+                                </div>
+                                <div class="emoji-option" data-value="2">
+                                    <span class="emoji">😕</span>
+                                    <span class="emoji-label">Fair</span>
+                                </div>
+                                <div class="emoji-option" data-value="3">
+                                    <span class="emoji">😐</span>
+                                    <span class="emoji-label">Okay</span>
+                                </div>
+                                <div class="emoji-option" data-value="4">
+                                    <span class="emoji">🙂</span>
+                                    <span class="emoji-label">Good</span>
+                                </div>
+                                <div class="emoji-option" data-value="5">
+                                    <span class="emoji">😍</span>
+                                    <span class="emoji-label">Excellent</span>
+                                </div>
+                            </div>
+                            <input type="hidden" name="facilities-rating" id="facilities-rating-value">
+                            <small class="error-message"></small>
+                        </div>
+                        
+                        <div class="rating-item" data-aos="zoom-in" data-aos-delay="300">
+                            <label>Student Support</label>
+                            <div class="emoji-rating" id="support-rating">
+                                <div class="emoji-option" data-value="1">
+                                    <span class="emoji">😡</span>
+                                    <span class="emoji-label">Poor</span>
+                                </div>
+                                <div class="emoji-option" data-value="2">
+                                    <span class="emoji">😕</span>
+                                    <span class="emoji-label">Fair</span>
+                                </div>
+                                <div class="emoji-option" data-value="3">
+                                    <span class="emoji">😐</span>
+                                    <span class="emoji-label">Okay</span>
+                                </div>
+                                <div class="emoji-option" data-value="4">
+                                    <span class="emoji">🙂</span>
+                                    <span class="emoji-label">Good</span>
+                                </div>
+                                <div class="emoji-option" data-value="5">
+                                    <span class="emoji">😍</span>
+                                    <span class="emoji-label">Excellent</span>
+                                </div>
+                            </div>
+                            <input type="hidden" name="support-rating" id="support-rating-value">
+                            <small class="error-message"></small>
+                        </div>
+                        
+                        <div class="rating-item" data-aos="zoom-in" data-aos-delay="400">
+                            <label>Overall Experience</label>
+                            <div class="emoji-rating" id="overall-rating">
+                                <div class="emoji-option" data-value="1">
+                                    <span class="emoji">😡</span>
+                                    <span class="emoji-label">Poor</span>
+                                </div>
+                                <div class="emoji-option" data-value="2">
+                                    <span class="emoji">😕</span>
+                                    <span class="emoji-label">Fair</span>
+                                </div>
+                                <div class="emoji-option" data-value="3">
+                                    <span class="emoji">😐</span>
+                                    <span class="emoji-label">Okay</span>
+                                </div>
+                                <div class="emoji-option" data-value="4">
+                                    <span class="emoji">🙂</span>
+                                    <span class="emoji-label">Good</span>
+                                </div>
+                                <div class="emoji-option" data-value="5">
+                                    <span class="emoji">😍</span>
+                                    <span class="emoji-label">Excellent</span>
+                                </div>
+                            </div>
+                            <input type="hidden" name="overall-rating" id="overall-rating-value">
+                            <small class="error-message"></small>
+                        </div>
+                    </div>
+
+                    <!-- Feedback Rating Summary -->
+                    <div class="rating-summary" id="rating-summary">
+                        <h4>Your Ratings</h4>
+                        <div class="summary-content">
+                            <p>Please select ratings for all categories above.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Detailed Feedback -->
+                <div class="form-group">
+                    <h3 class="form-subtitle">Additional Comments</h3>
+                    
+                    <div class="input-group">
+                        <label for="strengths">What did you like most about your experience?</label>
+                        <textarea id="strengths" name="strengths" rows="4" placeholder="Please share what you found positive..."></textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="improvements">What could be improved?</label>
+                        <textarea id="improvements" name="improvements" rows="4" placeholder="Please share suggestions for improvement..."></textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="additional-comments">Any other comments or suggestions?</label>
+                        <textarea id="additional-comments" name="additional-comments" rows="4" placeholder="Additional comments..."></textarea>
+                    </div>
+                </div>
+                
+                <!-- Submit Section -->
+                <div class="form-submit">
+                    <button type="button" id="reset-form" class="btn-reset">Reset Form</button>
+                    <button type="submit" class="btn-submit">Submit Feedback</button>
+                </div>
+            </form>
+            
+            <!-- Thank You Message (initially hidden) -->
+            <div id="thank-you-message" class="thank-you-message" style="display: none;">
+                <div class="thank-you-content">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Thank You for Your Feedback!</h3>
+                    <p>Your feedback has been successfully submitted. We appreciate your time and valuable input.</p>
+                    <p>Your feedback helps us improve the educational experience at Zamindar College.</p>
+                    <button id="submit-another" class="btn">Submit Another Response</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Improvements Section -->
+    <section class="improvements-section" data-aos="fade-up">
+        <h2 class="section-title">Improvements Based on Student Feedback</h2>
+        
+        <div class="improvements-container">
+            <div class="improvement-card" data-aos="fade-up">
+                <div class="improvement-icon">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <h3>Enhanced Campus Wi-Fi</h3>
+                <p>Based on student feedback, we've upgraded our campus-wide Wi-Fi infrastructure to provide faster and more reliable internet access.</p>
+            </div>
+            
+            <div class="improvement-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="improvement-icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <h3>Updated Computer Labs</h3>
+                <p>We've upgraded our computer labs with new equipment and software to better support your academic needs.</p>
+            </div>
+            
+            <div class="improvement-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="improvement-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3>Expanded Library Resources</h3>
+                <p>Our library now offers extended hours and an expanded collection of digital resources based on student suggestions.</p>
+            </div>
+            
+            <div class="improvement-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="improvement-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Improved Cafeteria Services</h3>
+                <p>We've enhanced our cafeteria menu and seating arrangements to provide a better dining experience on campus.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Zamindar College, Gujrat, Punjab</p>
+                <p><i class="fas fa-phone"></i> +92-53-3456789</p>
+                <p><i class="fas fa-envelope"></i> info@zamindarcollege.edu.pk</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="campus.html">Campus</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Student Portal</a></li>
+                    <li><a href="#">E-Library</a></li>
+                    <li><a href="#">Downloads</a></li>
+                    <li><a href="#">Scholarships</a></li>
+                    <li><a href="#">Alumni</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Subscribe</h3>
+                <p>Subscribe to our newsletter for updates and announcements.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your Email Address">
+                    <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Zamindar College. All Rights Reserved.</p>
+            <p class="watermark">Made by Moeed Mirza</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/feedback.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            offset: 150,
+        });
+    </script>
+</body>
+</html>

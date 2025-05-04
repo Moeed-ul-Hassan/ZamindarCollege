@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Life - Zamindar College</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="css/campus.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="attached_assets/OIP.jfif" alt="Zamindar College Logo" class="logo-img">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="academics.html">Academics</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="campus.html" class="active">Campus</a>
+            <a href="events.html">Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+        </div>
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner" data-aos="fade-down">
+        <div class="banner-content">
+            <h1>Campus Life</h1>
+            <p>Discover the vibrant and enriching experience at Zamindar College</p>
+        </div>
+    </section>
+
+    <!-- Campus Tour Section -->
+    <section class="campus-tour" data-aos="fade-up">
+        <h2 class="section-title">Virtual Campus Tour</h2>
+        <div class="tour-container">
+            <div class="tour-map" data-aos="zoom-in">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>Interactive Campus Map</p>
+                    <span>Click on buildings to explore</span>
+                </div>
+                <div class="map-overlay">
+                    <!-- This would be replaced with an actual interactive map in a real implementation -->
+                    <div class="map-hotspot" data-building="admin" style="top: 30%; left: 40%;">
+                        <i class="fas fa-building"></i>
+                        <span>Admin Block</span>
+                    </div>
+                    <div class="map-hotspot" data-building="library" style="top: 50%; left: 60%;">
+                        <i class="fas fa-book"></i>
+                        <span>Library</span>
+                    </div>
+                    <div class="map-hotspot" data-building="science" style="top: 40%; left: 75%;">
+                        <i class="fas fa-flask"></i>
+                        <span>Science Block</span>
+                    </div>
+                    <div class="map-hotspot" data-building="arts" style="top: 60%; left: 25%;">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Arts Block</span>
+                    </div>
+                    <div class="map-hotspot" data-building="sports" style="top: 70%; left: 50%;">
+                        <i class="fas fa-futbol"></i>
+                        <span>Sports Complex</span>
+                    </div>
+                    <div class="map-hotspot" data-building="hostel" style="top: 20%; left: 80%;">
+                        <i class="fas fa-home"></i>
+                        <span>Hostels</span>
+                    </div>
+                    <div class="map-hotspot" data-building="cafeteria" style="top: 25%; left: 20%;">
+                        <i class="fas fa-utensils"></i>
+                        <span>Cafeteria</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tour-info" data-aos="fade-left">
+                <div class="building-info" id="admin-info">
+                    <h3><i class="fas fa-building"></i> Administration Block</h3>
+                    <p>The central hub for all administrative functions, including admissions office, accounts department, and principal's office. The historic building dates back to 1925 and features colonial architecture.</p>
+                </div>
+                <div class="building-info" id="library-info">
+                    <h3><i class="fas fa-book"></i> Central Library</h3>
+                    <p>Our state-of-the-art library houses over 50,000 books, journals, and digital resources. It features spacious reading halls, discussion rooms, and computer terminals for research purposes.</p>
+                </div>
+                <div class="building-info" id="science-info">
+                    <h3><i class="fas fa-flask"></i> Science Block</h3>
+                    <p>Home to our Physics, Chemistry, Biology, and Computer Science departments. The building contains modern laboratories equipped with the latest scientific instruments and technology.</p>
+                </div>
+                <div class="building-info" id="arts-info">
+                    <h3><i class="fas fa-paint-brush"></i> Arts Block</h3>
+                    <p>This building houses the Humanities and Social Sciences departments, including English, Economics, and Sociology. Features lecture halls, seminar rooms, and a small auditorium.</p>
+                </div>
+                <div class="building-info" id="sports-info">
+                    <h3><i class="fas fa-futbol"></i> Sports Complex</h3>
+                    <p>Our comprehensive sports facilities include a cricket ground, football field, basketball and tennis courts, and an indoor gym. The complex also houses a swimming pool and athletics track.</p>
+                </div>
+                <div class="building-info" id="hostel-info">
+                    <h3><i class="fas fa-home"></i> Student Hostels</h3>
+                    <p>Comfortable and secure accommodation for out-of-town students. Separate hostels for male and female students with modern amenities, study rooms, and recreational facilities.</p>
+                </div>
+                <div class="building-info" id="cafeteria-info">
+                    <h3><i class="fas fa-utensils"></i> Campus Cafeteria</h3>
+                    <p>A spacious dining facility offering nutritious and affordable meals throughout the day. The cafeteria also includes a coffee shop and outdoor seating area for students to relax and socialize.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="facilities" data-aos="fade-up">
+        <h2 class="section-title">Campus Facilities</h2>
+        <div class="facilities-container">
+            <div class="facility-card" data-aos="flip-left">
+                <div class="facility-icon">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <h3>WiFi Campus</h3>
+                <p>High-speed internet connectivity throughout the campus to support academic and research activities.</p>
+            </div>
+
+            <div class="facility-card" data-aos="flip-left" data-aos-delay="100">
+                <div class="facility-icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h3>Computer Labs</h3>
+                <p>Multiple computer laboratories equipped with the latest hardware and software for educational purposes.</p>
+            </div>
+
+            <div class="facility-card" data-aos="flip-left" data-aos-delay="200">
+                <div class="facility-icon">
+                    <i class="fas fa-first-aid"></i>
+                </div>
+                <h3>Medical Center</h3>
+                <p>On-campus medical facility with qualified doctors and staff to provide immediate healthcare services.</p>
+            </div>
+
+            <div class="facility-card" data-aos="flip-left" data-aos-delay="300">
+                <div class="facility-icon">
+                    <i class="fas fa-bus"></i>
+                </div>
+                <h3>Transport Service</h3>
+                <p>College buses provide convenient transportation for students and staff from various parts of the city.</p>
+            </div>
+
+            <div class="facility-card" data-aos="flip-left" data-aos-delay="400">
+                <div class="facility-icon">
+                    <i class="fas fa-mosque"></i>
+                </div>
+                <h3>Prayer Hall</h3>
+                <p>Dedicated prayer spaces for students and staff to fulfill their religious obligations.</p>
+            </div>
+
+            <div class="facility-card" data-aos="flip-left" data-aos-delay="500">
+                <div class="facility-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h3>Convenience Store</h3>
+                <p>On-campus store offering stationery, basic necessities, and snacks for students' convenience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Life Section -->
+    <section class="student-life" data-aos="fade-up">
+        <h2 class="section-title">Student Life</h2>
+        <div class="student-life-container">
+            <div class="student-life-image" data-aos="fade-right">
+                <div class="image-placeholder">
+                    <i class="fas fa-users"></i>
+                    <p>Vibrant Campus Community</p>
+                </div>
+            </div>
+            <div class="student-life-content" data-aos="fade-left">
+                <h3>Diverse and Inclusive Community</h3>
+                <p>Zamindar College is home to a diverse student body from various cultural, social, and economic backgrounds. Our inclusive environment celebrates this diversity and provides equal opportunities for all students to grow and excel.</p>
+                <p>Campus life at Zamindar College extends beyond academics, offering numerous opportunities for personal growth, leadership development, and social engagement. From participating in clubs and societies to contributing to community service projects, students can explore their interests and develop important life skills.</p>
+                <div class="student-testimonial">
+                    <p>"My experience at Zamindar College has been transformative. The supportive community, excellent faculty, and numerous extra-curricular opportunities have helped me grow personally and academically."</p>
+                    <span>- Hasan Ali, BS Physics, Final Year</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clubs and Societies Section -->
+    <section class="clubs-societies" data-aos="fade-up">
+        <h2 class="section-title">Clubs & Societies</h2>
+        <div class="clubs-container">
+            <div class="club-card" data-aos="zoom-in">
+                <div class="club-icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <h3>Science Society</h3>
+                <p>Promotes scientific inquiry through experiments, exhibitions, and competitions. Regular science fairs and guest lectures expose students to cutting-edge research.</p>
+                <a href="#" class="btn">Join Now</a>
+            </div>
+
+            <div class="club-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="club-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Computing Club</h3>
+                <p>For technology enthusiasts, this club organizes coding competitions, hackathons, and workshops on emerging technologies and programming languages.</p>
+                <a href="#" class="btn">Join Now</a>
+            </div>
+
+            <div class="club-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="club-icon">
+                    <i class="fas fa-theater-masks"></i>
+                </div>
+                <h3>Drama Club</h3>
+                <p>Provides a platform for artistic expression through theatrical performances, acting workshops, and annual dramatic productions.</p>
+                <a href="#" class="btn">Join Now</a>
+            </div>
+
+            <div class="club-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="club-icon">
+                    <i class="fas fa-microphone-alt"></i>
+                </div>
+                <h3>Debating Society</h3>
+                <p>Enhances public speaking and critical thinking skills through regular debates, Model UN conferences, and parliamentary-style competitions.</p>
+                <a href="#" class="btn">Join Now</a>
+            </div>
+
+            <div class="club-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="club-icon">
+                    <i class="fas fa-pen-fancy"></i>
+                </div>
+                <h3>Literary Club</h3>
+                <p>Fosters creativity in writing through poetry competitions, essay contests, and the publication of the college literary magazine.</p>
+                <a href="#" class="btn">Join Now</a>
+            </div>
+
+            <div class="club-card" data-aos="zoom-in" data-aos-delay="500">
+                <div class="club-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>Community Service Club</h3>
+                <p>Organizes various volunteer activities and social service projects to help underprivileged communities and develop students' sense of social responsibility.</p>
+                <a href="#" class="btn">Join Now</a>
+            </div>
+        </div>
+        <div class="clubs-more" data-aos="fade-up">
+            <p>These are just a few of the many clubs and societies available at Zamindar College. New clubs are formed each year based on student interests.</p>
+            <a href="#" class="btn">View All Clubs</a>
+        </div>
+    </section>
+
+    <!-- Hostel Life Section -->
+    <section class="hostel-life" data-aos="fade-up">
+        <h2 class="section-title">Hostel Life</h2>
+        <div class="hostel-container">
+            <div class="hostel-content" data-aos="fade-right">
+                <h3>Comfortable & Secure Accommodation</h3>
+                <p>Our hostels provide a comfortable living environment for students who come from different cities and regions. The hostel facilities are designed to create a conducive atmosphere for both academic pursuits and social interaction.</p>
+                <h4>Hostel Features:</h4>
+                <ul>
+                    <li><i class="fas fa-bed"></i> Furnished rooms with study tables and storage space</li>
+                    <li><i class="fas fa-wifi"></i> High-speed internet connectivity</li>
+                    <li><i class="fas fa-utensils"></i> Three nutritious meals daily</li>
+                    <li><i class="fas fa-couch"></i> Common rooms with TV and indoor games</li>
+                    <li><i class="fas fa-book-reader"></i> Reading rooms for quiet study</li>
+                    <li><i class="fas fa-shield-alt"></i> 24/7 security and warden supervision</li>
+                    <li><i class="fas fa-tshirt"></i> Laundry services</li>
+                    <li><i class="fas fa-first-aid"></i> First-aid and medical assistance</li>
+                </ul>
+                <a href="#" class="btn">Hostel Application</a>
+            </div>
+            <div class="hostel-gallery" data-aos="fade-left">
+                <div class="hostel-image-placeholder">
+                    <i class="fas fa-home"></i>
+                    <p>Comfortable Student Accommodation</p>
+                </div>
+                <div class="hostel-image-placeholder">
+                    <i class="fas fa-users"></i>
+                    <p>Common Areas for Recreation</p>
+                </div>
+                <div class="hostel-image-placeholder">
+                    <i class="fas fa-utensils"></i>
+                    <p>Mess Hall with Quality Food</p>
+                </div>
+                <div class="hostel-image-placeholder">
+                    <i class="fas fa-book"></i>
+                    <p>Study Rooms for Focused Learning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sports and Recreation Section -->
+    <section class="sports-recreation" data-aos="fade-up">
+        <h2 class="section-title">Sports & Recreation</h2>
+        <div class="sports-container">
+            <div class="sports-intro" data-aos="fade-up">
+                <p>Zamindar College has a strong tradition of excellence in sports. We believe that physical fitness and competitive sports are essential components of a well-rounded education. Our college regularly participates in inter-collegiate, regional, and national tournaments in various sports disciplines.</p>
+            </div>
+            <div class="sports-facilities">
+                <div class="sports-card" data-aos="zoom-in">
+                    <div class="sports-icon">
+                        <i class="fas fa-cricket-ball"></i>
+                    </div>
+                    <h3>Cricket Ground</h3>
+                    <p>Well-maintained cricket pitch with practice nets and pavilion for both practice and competitive matches.</p>
+                </div>
+
+                <div class="sports-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="sports-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <h3>Football Field</h3>
+                    <p>Regulation-size football field with proper marking and goal posts for training and competitions.</p>
+                </div>
+
+                <div class="sports-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="sports-icon">
+                        <i class="fas fa-basketball-ball"></i>
+                    </div>
+                    <h3>Basketball Courts</h3>
+                    <p>Multiple basketball courts with standard equipment for practice and tournaments.</p>
+                </div>
+
+                <div class="sports-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="sports-icon">
+                        <i class="fas fa-table-tennis"></i>
+                    </div>
+                    <h3>Indoor Sports Complex</h3>
+                    <p>Facilities for badminton, table tennis, chess, and other indoor games and sports.</p>
+                </div>
+
+                <div class="sports-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="sports-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>Athletic Track</h3>
+                    <p>400-meter running track for athletics practices and competitions.</p>
+                </div>
+
+                <div class="sports-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="sports-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Fitness Center</h3>
+                    <p>Modern gym equipped with cardio and strength training equipment for students and staff.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Safety Section -->
+    <section class="campus-safety" data-aos="fade-up">
+        <h2 class="section-title">Campus Safety & Security</h2>
+        <div class="safety-container">
+            <div class="safety-icon" data-aos="zoom-in">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="safety-content" data-aos="fade-right">
+                <h3>Your Safety is Our Priority</h3>
+                <p>Zamindar College is committed to providing a safe and secure environment for all students, faculty, and staff. Our comprehensive security measures ensure that everyone on campus can focus on their studies and activities without concerns about their safety.</p>
+                <div class="safety-features">
+                    <div class="safety-feature">
+                        <i class="fas fa-video"></i>
+                        <h4>CCTV Surveillance</h4>
+                        <p>The entire campus is monitored through CCTV cameras positioned at strategic locations.</p>
+                    </div>
+                    <div class="safety-feature">
+                        <i class="fas fa-user-shield"></i>
+                        <h4>Security Personnel</h4>
+                        <p>Trained security guards patrol the campus 24/7 to ensure safety at all times.</p>
+                    </div>
+                    <div class="safety-feature">
+                        <i class="fas fa-id-card"></i>
+                        <h4>ID Card System</h4>
+                        <p>Mandatory ID cards for all students and staff to control access to campus facilities.</p>
+                    </div>
+                    <div class="safety-feature">
+                        <i class="fas fa-fire-extinguisher"></i>
+                        <h4>Fire Safety</h4>
+                        <p>Regular fire drills and well-maintained fire safety equipment throughout the campus.</p>
+                    </div>
+                </div>
+                <div class="emergency-contacts">
+                    <h4>Emergency Contact Numbers:</h4>
+                    <p><i class="fas fa-phone"></i> Security Office: 042-9200222</p>
+                    <p><i class="fas fa-phone"></i> Medical Center: 042-9200223</p>
+                    <p><i class="fas fa-phone"></i> Hostel Warden: 042-9200224</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Gujrat Road, Gujranwala, Punjab, Pakistan</p>
+                <p><i class="fas fa-phone"></i> +92-55-9200220</p>
+                <p><i class="fas fa-envelope"></i> info@zamindarcollege.edu.pk</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Zamindar College. All Rights Reserved.</p>
+            <p class="watermark">Made by Moeed Mirza</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/campus.js"></script>
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Board - Zamindar College</title>
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/noticeboard.css">
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="OIP.jfif" alt="Zamindar College Logo" class="logo-img">
+                <span>Zamindar College</span>
+            </a>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="academics.html">Academics</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="campus.html">Campus</a>
+            <a href="events.html">Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="noticeboard.html" class="active">Notice Board</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+        </div>
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner" data-aos="fade-down">
+        <div class="banner-content">
+            <h1>College Notice Board</h1>
+            <p>Stay updated with important announcements and events</p>
+        </div>
+    </section>
+
+    <!-- Notice Board Section -->
+    <section class="notice-board-section" data-aos="fade-up">
+        <h2 class="section-title">Latest Announcements</h2>
+        
+        <div class="notice-controls">
+            <div class="notice-filter">
+                <label for="notice-category">Filter by Category:</label>
+                <select id="notice-category">
+                    <option value="all">All Notices</option>
+                    <option value="academic">Academic</option>
+                    <option value="event">Events</option>
+                    <option value="admission">Admissions</option>
+                    <option value="exam">Examinations</option>
+                    <option value="faculty">Faculty</option>
+                </select>
+            </div>
+            
+            <div class="notice-search">
+                <input type="text" id="notice-search" placeholder="Search notices...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        
+        <div class="notice-board-container">
+            <div class="notice-board">
+                <div class="board-header">
+                    <h3>Important Announcements</h3>
+                    <span class="last-updated">Last Updated: May 4, 2025</span>
+                </div>
+                
+                <div class="notices">
+                    <!-- Urgent Notices -->
+                    <div class="notice urgent" data-aos="fade-right" data-category="exam">
+                        <div class="notice-pin"><i class="fas fa-thumbtack"></i></div>
+                        <div class="notice-content">
+                            <span class="notice-badge">Urgent</span>
+                            <h4>Final Examination Schedule</h4>
+                            <p class="notice-date">Posted on: May 2, 2025</p>
+                            <p>The final examination schedule for Spring 2025 has been announced. All students are required to check the examination center assignments and reporting times.</p>
+                            <a href="#" class="notice-link">View Schedule</a>
+                        </div>
+                    </div>
+                    
+                    <div class="notice urgent" data-aos="fade-right" data-aos-delay="100" data-category="admission">
+                        <div class="notice-pin"><i class="fas fa-thumbtack"></i></div>
+                        <div class="notice-content">
+                            <span class="notice-badge">Urgent</span>
+                            <h4>Admissions Open for 2025-26</h4>
+                            <p class="notice-date">Posted on: April 28, 2025</p>
+                            <p>Applications are now being accepted for the 2025-26 academic year. Last date to apply is June 15, 2025.</p>
+                            <a href="admissions.html" class="notice-link">Apply Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Regular Notices -->
+                    <div class="notice" data-aos="fade-right" data-aos-delay="200" data-category="academic">
+                        <div class="notice-pin"><i class="fas fa-thumbtack"></i></div>
+                        <div class="notice-content">
+                            <span class="notice-badge">Academic</span>
+                            <h4>Revised Course Material</h4>
+                            <p class="notice-date">Posted on: April 25, 2025</p>
+                            <p>Updated course materials for Computer Science, Physics, and Chemistry departments are now available in the library and online portal.</p>
+                            <a href="#" class="notice-link">Access Materials</a>
+                        </div>
+                    </div>
+                    
+                    <div class="notice" data-aos="fade-right" data-aos-delay="300" data-category="faculty">
+                        <div class="notice-pin"><i class="fas fa-thumbtack"></i></div>
+                        <div class="notice-content">
+                            <span class="notice-badge">Faculty</span>
+                            <h4>Faculty Meeting</h4>
+                            <p class="notice-date">Posted on: April 22, 2025</p>
+                            <p>All faculty members are required to attend the general meeting on May 10, 2025 at 2:00 PM in the Conference Hall.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="notice" data-aos="fade-right" data-aos-delay="400" data-category="event">
+                        <div class="notice-pin"><i class="fas fa-thumbtack"></i></div>
+                        <div class="notice-content">
+                            <span class="notice-badge">Event</span>
+                            <h4>Annual Sports Day</h4>
+                            <p class="notice-date">Posted on: April 20, 2025</p>
+                            <p>The annual sports day will be held on May 15, 2025. All students are encouraged to participate in various sports activities and competitions.</p>
+                            <a href="#" class="notice-link">Registration Form</a>
+                        </div>
+                    </div>
+                    
+                    <div class="notice" data-aos="fade-right" data-aos-delay="500" data-category="academic">
+                        <div class="notice-pin"><i class="fas fa-thumbtack"></i></div>
+                        <div class="notice-content">
+                            <span class="notice-badge">Academic</span>
+                            <h4>Library Timings Extended</h4>
+                            <p class="notice-date">Posted on: April 18, 2025</p>
+                            <p>The college library will now remain open until 9 PM on weekdays to accommodate students preparing for final exams.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="notice" data-aos="fade-right" data-aos-delay="600" data-category="event">
+                        <div class="notice-pin"><i class="fas fa-thumbtack"></i></div>
+                        <div class="notice-content">
+                            <span class="notice-badge">Event</span>
+                            <h4>Guest Lecture: Emerging Technologies</h4>
+                            <p class="notice-date">Posted on: April 15, 2025</p>
+                            <p>Dr. Ahmad Raza from COMSATS University will deliver a guest lecture on "Emerging Technologies in the 21st Century" on May 5, 2025 at 2 PM in the Main Auditorium.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="notice" data-aos="fade-right" data-aos-delay="700" data-category="admission">
+                        <div class="notice-pin"><i class="fas fa-thumbtack"></i></div>
+                        <div class="notice-content">
+                            <span class="notice-badge">Admission</span>
+                            <h4>Scholarship Interviews</h4>
+                            <p class="notice-date">Posted on: April 12, 2025</p>
+                            <p>Interviews for merit scholarships will be conducted from May 15-20, 2025. Check your email for schedule details.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="notice" data-aos="fade-right" data-aos-delay="800" data-category="exam">
+                        <div class="notice-pin"><i class="fas fa-thumbtack"></i></div>
+                        <div class="notice-content">
+                            <span class="notice-badge">Examination</span>
+                            <h4>Mid-Term Results Announced</h4>
+                            <p class="notice-date">Posted on: April 10, 2025</p>
+                            <p>Mid-term examination results for all departments have been announced. Students can check their results on the student portal.</p>
+                            <a href="#" class="notice-link">View Results</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination-container">
+                    <div class="pagination">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#" class="next">Next <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Notice Section (Admin) -->
+    <section class="add-notice-section" data-aos="fade-up">
+        <h2 class="section-title">Post a Notice</h2>
+        <div class="add-notice-container">
+            <form id="add-notice-form" class="add-notice-form">
+                <div class="input-group">
+                    <label for="notice-title">Notice Title</label>
+                    <input type="text" id="notice-title" name="notice-title" placeholder="Enter notice title">
+                </div>
+                
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="notice-category-input">Category</label>
+                        <select id="notice-category-input" name="notice-category">
+                            <option value="academic">Academic</option>
+                            <option value="event">Event</option>
+                            <option value="admission">Admission</option>
+                            <option value="exam">Examination</option>
+                            <option value="faculty">Faculty</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="notice-urgent">Priority</label>
+                        <select id="notice-urgent" name="notice-urgent">
+                            <option value="regular">Regular</option>
+                            <option value="urgent">Urgent</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="notice-content">Notice Content</label>
+                    <textarea id="notice-content" name="notice-content" rows="5" placeholder="Enter notice content"></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label for="notice-link">Link (Optional)</label>
+                    <input type="text" id="notice-link" name="notice-link" placeholder="Enter link URL">
+                </div>
+                
+                <div class="form-submit">
+                    <button type="reset" class="btn-reset">Reset</button>
+                    <button type="button" id="preview-notice" class="btn-preview">Preview Notice</button>
+                    <button type="submit" class="btn-submit">Post Notice</button>
+                </div>
+            </form>
+            
+            <!-- Notice Preview -->
+            <div id="notice-preview" class="notice-preview" style="display: none;">
+                <h3>Notice Preview</h3>
+                <div class="preview-container">
+                    <div class="notice" id="preview-notice-card">
+                        <div class="notice-pin"><i class="fas fa-thumbtack"></i></div>
+                        <div class="notice-content">
+                            <span class="notice-badge" id="preview-badge">Academic</span>
+                            <h4 id="preview-title">Notice Title</h4>
+                            <p class="notice-date" id="preview-date">Posted on: May 4, 2025</p>
+                            <p id="preview-content">Notice content will appear here.</p>
+                            <a href="#" class="notice-link" id="preview-link" style="display: none;">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="close-preview" class="btn-reset">Close Preview</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Archive Section -->
+    <section class="archive-section" data-aos="fade-up">
+        <h2 class="section-title">Notice Archives</h2>
+        <div class="archive-container">
+            <div class="archive-filters">
+                <div class="filter-group">
+                    <label for="archive-month">Month:</label>
+                    <select id="archive-month">
+                        <option value="all">All Months</option>
+                        <option value="january">January</option>
+                        <option value="february">February</option>
+                        <option value="march">March</option>
+                        <option value="april" selected>April</option>
+                        <option value="may">May</option>
+                        <option value="june">June</option>
+                        <option value="july">July</option>
+                        <option value="august">August</option>
+                        <option value="september">September</option>
+                        <option value="october">October</option>
+                        <option value="november">November</option>
+                        <option value="december">December</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="archive-year">Year:</label>
+                    <select id="archive-year">
+                        <option value="2025" selected>2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                    </select>
+                </div>
+                
+                <button id="archive-search-btn" class="btn-small">Search Archives</button>
+            </div>
+            
+            <div class="archive-list">
+                <table class="archive-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>April 5, 2025</td>
+                            <td>Mid-Term Examination Schedule</td>
+                            <td><span class="badge exam">Examination</span></td>
+                            <td><a href="#" class="btn-view">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>April 3, 2025</td>
+                            <td>Cultural Festival Announcement</td>
+                            <td><span class="badge event">Event</span></td>
+                            <td><a href="#" class="btn-view">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>April 1, 2025</td>
+                            <td>Library Book Return Deadline</td>
+                            <td><span class="badge academic">Academic</span></td>
+                            <td><a href="#" class="btn-view">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>March 28, 2025</td>
+                            <td>New Faculty Members Joining</td>
+                            <td><span class="badge faculty">Faculty</span></td>
+                            <td><a href="#" class="btn-view">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>March 25, 2025</td>
+                            <td>Admission Form Submission Deadline</td>
+                            <td><span class="badge admission">Admission</span></td>
+                            <td><a href="#" class="btn-view">View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="archive-pagination">
+                <span class="pagination-info">Showing 1-5 of 15 archived notices</span>
+                <div class="pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#" class="next">Next <i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Zamindar College, Gujrat, Punjab</p>
+                <p><i class="fas fa-phone"></i> +92-53-3456789</p>
+                <p><i class="fas fa-envelope"></i> info@zamindarcollege.edu.pk</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="campus.html">Campus</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Student Portal</a></li>
+                    <li><a href="#">E-Library</a></li>
+                    <li><a href="#">Downloads</a></li>
+                    <li><a href="#">Scholarships</a></li>
+                    <li><a href="#">Alumni</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Subscribe</h3>
+                <p>Subscribe to our newsletter for updates and announcements.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your Email Address">
+                    <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Zamindar College. All Rights Reserved.</p>
+            <p class="watermark">Made by Moeed Mirza</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/noticeboard.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            offset: 150,
+        });
+    </script>
+</body>
+</html>

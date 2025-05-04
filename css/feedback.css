@@ -1,0 +1,804 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --main-color: #4e008e;
+    --secondary-color: #9a35d1;
+    --black: #13131a;
+    --bg: #f5f5f5;
+    --border: .1rem solid rgba(255, 255, 255, .3);
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; 
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--bg);
+}
+
+section {
+    padding: 3rem 9%;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--main-color);
+    font-size: 3rem;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    height: .3rem;
+    background: var(--secondary-color);
+}
+
+.btn, .btn-submit {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 2.5rem;
+    border-radius: 5rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-transform: capitalize;
+}
+
+.btn:hover, .btn-submit:hover {
+    background: var(--secondary-color);
+    letter-spacing: .1rem;
+}
+
+.btn-reset {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 2.5rem;
+    border-radius: 5rem;
+    font-size: 1.7rem;
+    color: var(--black);
+    background: #f0f0f0;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-transform: capitalize;
+}
+
+.btn-reset:hover {
+    background: #e0e0e0;
+    letter-spacing: .1rem;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+}
+
+header .logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo .logo-img {
+    height: 6rem;
+    width: auto;
+    object-fit: contain;
+}
+
+header .logo span {
+    color: var(--main-color);
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+header .navbar a {
+    font-size: 1.6rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+
+header .navbar a:hover,
+header .navbar a.active {
+    color: var(--main-color);
+}
+
+header .icons i {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+header .icons i:hover {
+    color: var(--main-color);
+}
+
+#menu-bars {
+    display: none;
+}
+
+.search-form {
+    position: absolute;
+    top: 110%; 
+    right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    transition: .4s linear;
+}
+
+.search-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+.search-form label {
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.search-form label:hover {
+    color: var(--main-color);
+}
+
+/* Banner Styles */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://zamindarcollege.edu.pk/wp-content/uploads/2022/08/5-1536x1024.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 9rem;
+}
+
+.banner-content {
+    color: #fff;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.banner-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+.banner-content p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Feedback Section Styles */
+.feedback-section {
+    background: #fff;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.form-container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.feedback-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.feedback-intro p {
+    font-size: 1.7rem;
+    color: #666;
+    line-height: 1.8;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.feedback-form {
+    background: var(--bg);
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: var(--box-shadow);
+}
+
+.form-subtitle {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.form-group {
+    margin-bottom: 4rem;
+}
+
+.input-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    flex: 1 1 45%;
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--black);
+    margin-bottom: .8rem;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    color: #666;
+    background: #fff;
+    border-radius: .5rem;
+    border: 1px solid #ddd;
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 1.2rem;
+    margin-top: .5rem;
+    display: block;
+}
+
+/* Emoji Rating Styles */
+.rating-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.rating-item {
+    text-align: center;
+}
+
+.rating-item label {
+    display: block;
+    font-size: 1.7rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.rating-instructions {
+    font-size: 1.6rem;
+    color: #666;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.emoji-rating {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.emoji-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    border-radius: .8rem;
+}
+
+.emoji-option:hover {
+    transform: translateY(-5px);
+}
+
+.emoji-option.selected {
+    background: rgba(154, 53, 209, 0.1);
+    transform: translateY(-5px);
+}
+
+.emoji {
+    font-size: 3rem;
+    margin-bottom: .8rem;
+    transition: all 0.3s ease;
+}
+
+.emoji-option:hover .emoji {
+    transform: scale(1.2);
+}
+
+.emoji-option.selected .emoji {
+    transform: scale(1.2);
+}
+
+.emoji-label {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Rating Summary Styles */
+.rating-summary {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.rating-summary h4 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.summary-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.summary-content p {
+    font-size: 1.5rem;
+    color: #666;
+    text-align: center;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    background: #f9f9f9;
+}
+
+.summary-emoji {
+    font-size: 2.5rem;
+}
+
+.summary-text {
+    font-size: 1.4rem;
+    color: var(--black);
+}
+
+/* Form Submit Styles */
+.form-submit {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Thank You Message Styles */
+.thank-you-message {
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    backdrop-filter: blur(5px);
+    z-index: 100;
+}
+
+.thank-you-content {
+    background: #fff;
+    padding: 4rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    max-width: 60rem;
+    animation: zoomIn 0.5s ease;
+}
+
+.thank-you-content i {
+    font-size: 5rem;
+    color: #2ecc71;
+    margin-bottom: 2rem;
+}
+
+.thank-you-content h3 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.thank-you-content p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Improvements Section Styles */
+.improvements-section {
+    background: var(--bg);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.improvements-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+
+.improvement-card {
+    background: #fff;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.improvement-card:hover {
+    transform: translateY(-10px);
+}
+
+.improvement-icon {
+    margin-bottom: 2rem;
+}
+
+.improvement-icon i {
+    font-size: 4rem;
+    color: var(--main-color);
+}
+
+.improvement-card h3 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.improvement-card p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Footer Styles */
+footer {
+    background: #222;
+    padding-top: 3rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0 9%;
+}
+
+.footer-section {
+    flex: 1 1 25rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 6rem;
+    height: .2rem;
+    background: var(--secondary-color);
+}
+
+.footer-section p,
+.footer-section ul li {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin: 1rem 0;
+}
+
+.footer-section p i {
+    color: var(--secondary-color);
+    margin-right: .5rem;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--secondary-color);
+    padding-left: .5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+.subscribe-form {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.subscribe-form input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 3rem 0 0 3rem;
+}
+
+.subscribe-form .btn-submit {
+    padding: 1rem 1.5rem;
+    background: var(--main-color);
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 0 3rem 3rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subscribe-form .btn-submit:hover {
+    background: var(--secondary-color);
+}
+
+.footer-bottom {
+    background: #111;
+    padding: 2rem 9%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-bottom p {
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+.footer-bottom .watermark {
+    font-size: 1.4rem;
+    color: #999;
+    margin-top: 0.5rem;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-bars {
+        display: inline-block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        border-bottom: .1rem solid rgba(0, 0, 0, .2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .5s linear;
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #f7f7f7;
+        border-radius: .5rem;
+    }
+
+    .search-form {
+        width: 90%;
+    }
+
+    .banner-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .banner-content p {
+        font-size: 1.6rem;
+    }
+    
+    .input-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .input-group {
+        flex: 1 1 100%;
+    }
+    
+    .emoji-rating {
+        gap: 0.5rem;
+    }
+    
+    .emoji {
+        font-size: 2.5rem;
+    }
+    
+    .emoji-label {
+        font-size: 1rem;
+    }
+    
+    .form-submit {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    
+    .thank-you-content {
+        padding: 2rem;
+    }
+}
